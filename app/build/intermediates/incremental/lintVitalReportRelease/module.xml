@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/yoni/dev/test.txt/app"
+    name=":app"
+    type="APP"
+    maven="VoiceGram:app:"
+    agpVersion="8.1.0"
+    buildFolder="build"
+    bootClassPath="/Users/yoni/Library/Android/sdk/platforms/android-34/android.jar:/Users/yoni/Library/Android/sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
