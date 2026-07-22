@@ -10,22 +10,25 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.voicegram.app.R
-import com.voicegram.app.service.AuthManager
 import com.voicegram.app.service.SpeechToTextConverter
 import com.voicegram.app.service.TextToSpeechConverter
-import com.voicegram.app.service.TelegramService
 import com.voicegram.app.service.VoiceRecorder
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class CallActivity : AppCompatActivity() {
+class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispatchers.Main) {
     
-    private lateinit var authManager: AuthManager
     private lateinit var voiceRecorder: VoiceRecorder
     private lateinit var speechToTextConverter: SpeechToTextConverter
     private lateinit var textToSpeechConverter: TextToSpeechConverter
-    private lateinit var telegramService: TelegramService
     
     private lateinit var statusTextView: TextView
+    private lateinit var contactNameTextView: TextView
     private lateinit var endCallButton: Button
+    
+    private var botToken: String? = null
+    private var botName: String? = null
     
     private val RECORD_AUDIO_PERMISSION = 1
     
@@ -33,48 +36,36 @@ class CallActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call)
         
+        // Get bot information from intent
+        botToken = intent.getStringExtra("bot_token")
+        botName = intent.getStringExtra("bot_name")
+        
         // Initialize services
-        authManager = AuthManager(this)
         voiceRecorder = VoiceRecorder(this)
         speechToTextConverter = SpeechToTextConverter(this)
         textToSpeechConverter = TextToSpeechConverter(this)
-        telegramService = TelegramService()
         
         // Setup UI
         setupUI()
         
-        // Check authentication
-        checkAuthentication()
+        // Start voice recording
+        startVoiceRecording()
     }
     
     private fun setupUI() {
         statusTextView = findViewById(R.id.statusTextView)
+        contactNameTextView = findViewById(R.id.contactNameTextView)
         endCallButton = findViewById(R.id.endCallButton)
+        
+        contactNameTextView.text = botName ?: "Bot"
         
         endCallButton.setOnClickListener {
             endCall()
         }
     }
     
-    private fun checkAuthentication() {
-        if (!authManager.isAuthenticated()) {
-            Toast.makeText(this, "Please authenticate first", Toast.LENGTH_SHORT).show()
-            finish()
-            return
-        }
-        
-        // Setup Telegram credentials
-        val botToken = authManager.getBotToken()
-        val chatId = authManager.getChatId()
-        if (botToken != null && chatId != null) {
-            telegramService.setCredentials(botToken, chatId)
-        }
-        
-        startCall()
-    }
-    
-    private fun startCall() {
-        statusTextView.text = "Connected to chat"
+    private fun startVoiceRecording() {
+        statusTextView.text = "Connected to @$botName"
         
         // Check for audio recording permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) 
@@ -85,13 +76,9 @@ class CallActivity : AppCompatActivity() {
                 RECORD_AUDIO_PERMISSION
             )
         } else {
-            startVoiceRecording()
-        }
-    }
-    
-    private fun startVoiceRecording() {
-        voiceRecorder.startRecording { audioFile ->
-            statusTextView.text = "Recording..."
+            voiceRecorder.startRecording { audioFile ->
+                statusTextView.text = "Recording..."
+            }
         }
     }
     
@@ -107,8 +94,8 @@ class CallActivity : AppCompatActivity() {
     private fun processAudioFile(audioFile: java.io.File) {
         speechToTextConverter.convertAudioToText(audioFile, 
             { text ->
-                statusTextView.text = "Transcribed: $text"
-                sendToTelegram(text)
+                statusTextView.text = "Sending to bot..."
+                sendToBot(text)
             },
             { error ->
                 statusTextView.text = "Error: ${error.message}"
@@ -116,20 +103,23 @@ class CallActivity : AppCompatActivity() {
         )
     }
     
-    private fun sendToTelegram(text: String) {
-        // Use coroutine to send message
-        // For now, we'll show a placeholder
-        statusTextView.text = "Sending to Telegram: $text"
-        
-        // In production, you would use:
-        // lifecycleScope.launch {
-        //     val success = telegramService.sendMessage(text)
-        //     if (success) {
-        //         statusTextView.text = "Message sent successfully"
-        //     } else {
-        //         statusTextView.text = "Failed to send message"
-        //     }
-        // }
+    private fun sendToBot(text: String) {
+        launch {
+            // Placeholder for bot interaction
+            // In production, this would use the Telegram Bot API to send messages
+            statusTextView.text = "Message sent to @$botName"
+            
+            // Simulate a bot response
+            val botResponse = "This is a simulated response from @$botName. Your message was: $text"
+            speakBotResponse(botResponse)
+        }
+    }
+    
+    private fun speakBotResponse(text: String) {
+        statusTextView.text = "Bot: $text"
+        textToSpeechConverter.speak(text) {
+            statusTextView.text = "Ready to record"
+        }
     }
     
     private fun endCall() {
@@ -142,7 +132,7 @@ class CallActivity : AppCompatActivity() {
         // Cleanup
         // voiceRecorder.release() - Not implemented in current version
         // speechToTextConverter.release() - No resources to release
-        // textToSpeechConverter.release()
+        textToSpeechConverter.release()
         
         finish()
     }

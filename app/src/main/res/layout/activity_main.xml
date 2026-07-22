@@ -1,145 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5">
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:text="VoiceGram"
+        android:textColor="#2196F3"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
-        <!-- Header -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="32dp"
-            android:text="VoiceGram"
-            android:textColor="#2196F3"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+    <!-- Bot List Button -->
+    <Button
+        android:id="@+id/botListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#4CAF50"
+        android:padding="16dp"
+        android:text="My Bots"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-        <!-- Authentication Method -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Authentication Method"
-            android:textColor="#333333"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+    <!-- Info Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="VoiceGram allows you to make voice calls to Telegram bots\nwith speech-to-text and text-to-speech conversion"
+        android:textAlignment="center"
+        android:textColor="#666666"
+        android:textSize="14sp" />
 
-        <RadioGroup
-            android:id="@+id/authMethodGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp">
-
-            <RadioButton
-                android:id="@+id/botAuthRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Bot Token"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/phoneAuthRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Phone Number"
-                android:textSize="16sp" />
-
-        </RadioGroup>
-
-        <!-- Bot Token Fields -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Bot Token">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/botTokenEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:singleLine="true" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:hint="Chat ID">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/chatIdEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:singleLine="true" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Phone Number Field -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:hint="Phone Number"
-            android:visibility="gone">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phoneNumberEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:singleLine="true" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Authenticate Button -->
-        <Button
-            android:id="@+id/authenticateButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#2196F3"
-            android:padding="12dp"
-            android:text="Authenticate"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <!-- Chat List Button -->
-        <Button
-            android:id="@+id/chatListButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#4CAF50"
-            android:padding="12dp"
-            android:text="Open Chat List"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:visibility="gone" />
-
-        <!-- Info Text -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:text="VoiceGram allows you to make voice calls to Telegram chats\nwith speech-to-text and text-to-speech conversion"
-            android:textAlignment="center"
-            android:textColor="#666666"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

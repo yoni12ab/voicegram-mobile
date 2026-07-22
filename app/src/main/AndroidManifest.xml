@@ -36,6 +36,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.BotListActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.ChatListActivity"
             android:exported="true" />
         <activity
