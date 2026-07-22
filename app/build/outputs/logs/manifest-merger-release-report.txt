@@ -1,50 +1,73 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-22:12
-MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/e3997326f87f513fae9d5a1859269ba0/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/86c71cfc546b5433a9efb04a3aca0541/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/c9b676638a90c541d8c0a5b2a7b69e7d/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/d5bee55a51658ac8ded42cb2c0ebae12/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/yoni/.gradle/caches/8.11/transforms/8b6c8a719984114a7f288945014a7c61/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/edd5e6f799c42ee5af717830fd190b50/transformed/jetified-activity-1.8.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/b1cd49036132be70539c91cdcc68d347/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/4cf94babd7bedee71641b8ccaa032e23/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/101e50a7b2f2f7211249dd9272bd7676/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/92c84933b82a930ae847c2543d3fb475/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/50249e7530a0a0518b69f6e59b97e801/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/4aec9235d088d65af4d8d126bbef4c60/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/554da17201920786371c90c697999bc1/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/69eb210da203a3292b7d3256022adc65/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/307c701354bfb2432af524428f350402/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/bc2729852be1943ed5718358b6b24967/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/d9eb39cd78460d5908466041d1b8996c/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/bb256de25151e425ddf7fd770f0afd62/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/f94c03b8ec31b1de99fba32ff14540d7/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/0a7809f3b9189509fe166a5faa1be2c4/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/c0caef0b6650ca6e5142007fee00329d/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/4d322ac516bd073ce2a8eb5863c2a2a3/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/ffad8a271e05df9ffa2a43dbd720c9cf/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1afdf8c312bc468336cb1765b7e54dfd/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/ac5cf3bf62bd3ef51f1eb8fa3aebe124/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/7f9f3febd9be315723a8696f6d0addd1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dc0aa117194dda3efc7de234acb83178/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/34d6a098e254bbc3fa6e47ccc9568cde/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/4626af309ceb09d3b074b50ef4ea765d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/4bc6cd2f07c1c47fda169fbd2d8591e4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yoni/.gradle/caches/8.11/transforms/dc11881ad6c698c2ff8ac202f098ada1/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/45fe953424df99a0d6c31fcc9a91be2b/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/24f07ab621be3d42ed9cd49d4f84ad85/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/201a2be68f4fa3f6c484d4009f66b28d/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/8ddb777488a3988aa5e9ca6b21ba6250/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:1-50:12
+MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/b8c78e3cf8ee38eae81aa1797d145283/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/742bf59a509696cc8282292382346e12/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.squti:Android-Wave-Recorder:1.7.0] /Users/yoni/.gradle/caches/8.11/transforms/6b9c07d8ddf4a1cce05301e796eae49f/transformed/jetified-Android-Wave-Recorder-1.7.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/192b32a58577b9440882a505be95c1e1/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/117d399eac857a8d031cf82f173d8b4d/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/f99865ccec057b69d330aa739e044a4a/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.mlkit:text-recognition:16.0.0] /Users/yoni/.gradle/caches/8.11/transforms/16f356a9b64f3d6be8df438be8b80da6/transformed/jetified-text-recognition-16.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/d7a9f90b20a34f53862e5b41eb4f8e81/transformed/jetified-play-services-mlkit-text-recognition-19.0.0/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.mlkit:text-recognition-bundled-common:16.0.0] /Users/yoni/.gradle/caches/8.11/transforms/cd42b9e7ae986fcbb388468788cc0b30/transformed/jetified-text-recognition-bundled-common-16.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.mlkit:vision-interfaces:16.2.0] /Users/yoni/.gradle/caches/8.11/transforms/94ed70128a8dc87e5dfec5b545fe552f/transformed/jetified-vision-interfaces-16.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yoni/.gradle/caches/8.11/transforms/4ee388b28ef6e89ab2308f9893ac0854/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/yoni/.gradle/caches/8.11/transforms/62d280e720134bc7dde72a0cf87ee58b/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/2de2f7083e71d73181248c30ef98d690/transformed/jetified-activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/5e64f41e28423486d48a11f2d6e18c21/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/be560b599ab9009985c6a47c91bf4f89/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/214673ba02d21e7cb4f29369fbaf22a6/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/464ff619081b639c80a256a42b507217/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/9d7a98fb4238fce8c0ca51a1a2a2691c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/597d86886664ff9884c5a40a286fffc2/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/ff39a665f9cb9c32128e3edea730f286/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/72f96e5a458478dfb48efebcaf738bb2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/87434d0a8f661b032f13162db36510f2/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/cf558747f9ac8272c3d7ecb14630ea06/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/58e23487e6e1c3475b769ebe33133629/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/6e4c54044e3c3e1131e376b88c7696f4/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/e5085b735acfe6e6a72fbe55f237841d/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/f0fddb5d9db99a3e962254413da1ac1d/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/578a2e6b6d9a598c5951a911adb6884e/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/02edfb8fa083dc18f3f9c221c1758bd0/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/09379b66a871075d71a5301b07b48257/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/05fd7b68b74832803f08d0a54cdd7903/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/bd4a0f4e6fb9ac0eda1d4aa1f5f8e9c0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/5983985e238e2418f984f733d1ec72ad/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/3a047073f87abb962484091946b9283f/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/2cb35d0836a407fa49aaf4b0edbc5a90/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/9c1c313c8aa3da3b32524e0458973716/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/2555e54c22c7384f880bb000a151f571/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/yoni/.gradle/caches/8.11/transforms/cecd23383ffba18fe6856172a3738449/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/728485cf74604f358fb680bef11722b9/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/5c5f36d46ddaa2d763ce42754040d86a/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/f9df1e34cb3aa3f09bc4d938a3f37c27/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/1e65b1dca25dd5bc899d85357e8bbd9d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/2806a9b194e1790c93ec643593db1e87/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/yoni/.gradle/caches/8.11/transforms/f07986c4c4fd987428886075b5a33622/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/yoni/.gradle/caches/8.11/transforms/9e89242027711219fe37381d04e20b34/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/yoni/.gradle/caches/8.11/transforms/d3069fed30c0d2641972949e2c4d9a8b/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yoni/.gradle/caches/8.11/transforms/3bd719d487f51573daa6df49317ecd53/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/e4e03d997f385e4bdcc5ddb9f1ff63a4/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/92679eb4c6ebac62718a3b7bc6d1c5e1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/29a3813876726076d15407d6bcd474d5/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/65e6cdd71c24c98fb3822818a024cc8e/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yoni/.gradle/caches/8.11/transforms/190a5aa6b7e2431ccea7417637572208/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
 	package
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -54,235 +77,445 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gra
 	xmlns:android
 		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:22-77
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:5-69
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:22-66
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:18:22-72
+uses-permission#android.permission.READ_CALL_LOG
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:19:5-72
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:19:22-69
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:22:5-77
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:22:22-74
 application
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-20:19
-INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-20:19
-MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/e3997326f87f513fae9d5a1859269ba0/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/e3997326f87f513fae9d5a1859269ba0/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/34d6a098e254bbc3fa6e47ccc9568cde/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/34d6a098e254bbc3fa6e47ccc9568cde/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:24:5-48:19
+INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:24:5-48:19
+MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/b8c78e3cf8ee38eae81aa1797d145283/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/b8c78e3cf8ee38eae81aa1797d145283/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/742bf59a509696cc8282292382346e12/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/742bf59a509696cc8282292382346e12/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yoni/.gradle/caches/8.11/transforms/4ee388b28ef6e89ab2308f9893ac0854/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yoni/.gradle/caches/8.11/transforms/4ee388b28ef6e89ab2308f9893ac0854/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/f9df1e34cb3aa3f09bc4d938a3f37c27/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/f9df1e34cb3aa3f09bc4d938a3f37c27/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yoni/.gradle/caches/8.11/transforms/190a5aa6b7e2431ccea7417637572208/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yoni/.gradle/caches/8.11/transforms/190a5aa6b7e2431ccea7417637572208/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
 	android:extractNativeLibs
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:27:9-41
 	android:roundIcon
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:9-54
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:28:9-54
 	android:icon
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:8:9-43
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:26:9-43
 	android:allowBackup
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:7:9-36
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:25:9-36
 	android:theme
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:11:9-67
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:29:9-67
 activity#com.voicegram.app.MainActivity
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:12:9-19:20
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:30:9-37:20
 	android:exported
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:13-36
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:31:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:15:13-18:29
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:33:13-36:29
 action#android.intent.action.MAIN
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:16:17-69
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:35:27-74
+activity#com.voicegram.app.ui.BotListActivity
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:38:9-40:39
+	android:exported
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:39:13-47
+activity#com.voicegram.app.ui.ChatListActivity
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:41:9-43:39
+	android:exported
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:43:13-36
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:42:13-48
+activity#com.voicegram.app.ui.CallActivity
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:44:9-47:52
+	android:screenOrientation
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:47:13-49
+	android:exported
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:46:13-36
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:45:13-44
 uses-sdk
 INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/e3997326f87f513fae9d5a1859269ba0/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/e3997326f87f513fae9d5a1859269ba0/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/86c71cfc546b5433a9efb04a3aca0541/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/86c71cfc546b5433a9efb04a3aca0541/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/c9b676638a90c541d8c0a5b2a7b69e7d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/c9b676638a90c541d8c0a5b2a7b69e7d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/d5bee55a51658ac8ded42cb2c0ebae12/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/d5bee55a51658ac8ded42cb2c0ebae12/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/yoni/.gradle/caches/8.11/transforms/8b6c8a719984114a7f288945014a7c61/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/yoni/.gradle/caches/8.11/transforms/8b6c8a719984114a7f288945014a7c61/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/edd5e6f799c42ee5af717830fd190b50/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/edd5e6f799c42ee5af717830fd190b50/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/b1cd49036132be70539c91cdcc68d347/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/b1cd49036132be70539c91cdcc68d347/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/4cf94babd7bedee71641b8ccaa032e23/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/4cf94babd7bedee71641b8ccaa032e23/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/101e50a7b2f2f7211249dd9272bd7676/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/101e50a7b2f2f7211249dd9272bd7676/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/92c84933b82a930ae847c2543d3fb475/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/92c84933b82a930ae847c2543d3fb475/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/50249e7530a0a0518b69f6e59b97e801/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/50249e7530a0a0518b69f6e59b97e801/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/4aec9235d088d65af4d8d126bbef4c60/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/4aec9235d088d65af4d8d126bbef4c60/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/554da17201920786371c90c697999bc1/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/554da17201920786371c90c697999bc1/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/69eb210da203a3292b7d3256022adc65/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/69eb210da203a3292b7d3256022adc65/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/307c701354bfb2432af524428f350402/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/307c701354bfb2432af524428f350402/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/bc2729852be1943ed5718358b6b24967/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/bc2729852be1943ed5718358b6b24967/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/d9eb39cd78460d5908466041d1b8996c/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/d9eb39cd78460d5908466041d1b8996c/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/bb256de25151e425ddf7fd770f0afd62/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/bb256de25151e425ddf7fd770f0afd62/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/f94c03b8ec31b1de99fba32ff14540d7/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/f94c03b8ec31b1de99fba32ff14540d7/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/0a7809f3b9189509fe166a5faa1be2c4/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/0a7809f3b9189509fe166a5faa1be2c4/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/c0caef0b6650ca6e5142007fee00329d/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/c0caef0b6650ca6e5142007fee00329d/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/4d322ac516bd073ce2a8eb5863c2a2a3/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/4d322ac516bd073ce2a8eb5863c2a2a3/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/ffad8a271e05df9ffa2a43dbd720c9cf/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/ffad8a271e05df9ffa2a43dbd720c9cf/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1afdf8c312bc468336cb1765b7e54dfd/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1afdf8c312bc468336cb1765b7e54dfd/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/ac5cf3bf62bd3ef51f1eb8fa3aebe124/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/ac5cf3bf62bd3ef51f1eb8fa3aebe124/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/7f9f3febd9be315723a8696f6d0addd1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/7f9f3febd9be315723a8696f6d0addd1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dc0aa117194dda3efc7de234acb83178/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dc0aa117194dda3efc7de234acb83178/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/34d6a098e254bbc3fa6e47ccc9568cde/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/34d6a098e254bbc3fa6e47ccc9568cde/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/4626af309ceb09d3b074b50ef4ea765d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/4626af309ceb09d3b074b50ef4ea765d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/4bc6cd2f07c1c47fda169fbd2d8591e4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/4bc6cd2f07c1c47fda169fbd2d8591e4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yoni/.gradle/caches/8.11/transforms/dc11881ad6c698c2ff8ac202f098ada1/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yoni/.gradle/caches/8.11/transforms/dc11881ad6c698c2ff8ac202f098ada1/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/45fe953424df99a0d6c31fcc9a91be2b/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/45fe953424df99a0d6c31fcc9a91be2b/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/24f07ab621be3d42ed9cd49d4f84ad85/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/24f07ab621be3d42ed9cd49d4f84ad85/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/201a2be68f4fa3f6c484d4009f66b28d/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/201a2be68f4fa3f6c484d4009f66b28d/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/8ddb777488a3988aa5e9ca6b21ba6250/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/8ddb777488a3988aa5e9ca6b21ba6250/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/b8c78e3cf8ee38eae81aa1797d145283/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/b8c78e3cf8ee38eae81aa1797d145283/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/742bf59a509696cc8282292382346e12/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/742bf59a509696cc8282292382346e12/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.squti:Android-Wave-Recorder:1.7.0] /Users/yoni/.gradle/caches/8.11/transforms/6b9c07d8ddf4a1cce05301e796eae49f/transformed/jetified-Android-Wave-Recorder-1.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.squti:Android-Wave-Recorder:1.7.0] /Users/yoni/.gradle/caches/8.11/transforms/6b9c07d8ddf4a1cce05301e796eae49f/transformed/jetified-Android-Wave-Recorder-1.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/192b32a58577b9440882a505be95c1e1/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/192b32a58577b9440882a505be95c1e1/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/117d399eac857a8d031cf82f173d8b4d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yoni/.gradle/caches/8.11/transforms/117d399eac857a8d031cf82f173d8b4d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/f99865ccec057b69d330aa739e044a4a/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/f99865ccec057b69d330aa739e044a4a/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.mlkit:text-recognition:16.0.0] /Users/yoni/.gradle/caches/8.11/transforms/16f356a9b64f3d6be8df438be8b80da6/transformed/jetified-text-recognition-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:text-recognition:16.0.0] /Users/yoni/.gradle/caches/8.11/transforms/16f356a9b64f3d6be8df438be8b80da6/transformed/jetified-text-recognition-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/d7a9f90b20a34f53862e5b41eb4f8e81/transformed/jetified-play-services-mlkit-text-recognition-19.0.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/d7a9f90b20a34f53862e5b41eb4f8e81/transformed/jetified-play-services-mlkit-text-recognition-19.0.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:text-recognition-bundled-common:16.0.0] /Users/yoni/.gradle/caches/8.11/transforms/cd42b9e7ae986fcbb388468788cc0b30/transformed/jetified-text-recognition-bundled-common-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:text-recognition-bundled-common:16.0.0] /Users/yoni/.gradle/caches/8.11/transforms/cd42b9e7ae986fcbb388468788cc0b30/transformed/jetified-text-recognition-bundled-common-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.mlkit:vision-interfaces:16.2.0] /Users/yoni/.gradle/caches/8.11/transforms/94ed70128a8dc87e5dfec5b545fe552f/transformed/jetified-vision-interfaces-16.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-interfaces:16.2.0] /Users/yoni/.gradle/caches/8.11/transforms/94ed70128a8dc87e5dfec5b545fe552f/transformed/jetified-vision-interfaces-16.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yoni/.gradle/caches/8.11/transforms/4ee388b28ef6e89ab2308f9893ac0854/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yoni/.gradle/caches/8.11/transforms/4ee388b28ef6e89ab2308f9893ac0854/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/yoni/.gradle/caches/8.11/transforms/62d280e720134bc7dde72a0cf87ee58b/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/yoni/.gradle/caches/8.11/transforms/62d280e720134bc7dde72a0cf87ee58b/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/2de2f7083e71d73181248c30ef98d690/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/2de2f7083e71d73181248c30ef98d690/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/5e64f41e28423486d48a11f2d6e18c21/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/yoni/.gradle/caches/8.11/transforms/5e64f41e28423486d48a11f2d6e18c21/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/be560b599ab9009985c6a47c91bf4f89/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/be560b599ab9009985c6a47c91bf4f89/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/214673ba02d21e7cb4f29369fbaf22a6/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/214673ba02d21e7cb4f29369fbaf22a6/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/464ff619081b639c80a256a42b507217/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/464ff619081b639c80a256a42b507217/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/9d7a98fb4238fce8c0ca51a1a2a2691c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/9d7a98fb4238fce8c0ca51a1a2a2691c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/597d86886664ff9884c5a40a286fffc2/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/597d86886664ff9884c5a40a286fffc2/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/ff39a665f9cb9c32128e3edea730f286/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/ff39a665f9cb9c32128e3edea730f286/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/72f96e5a458478dfb48efebcaf738bb2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/72f96e5a458478dfb48efebcaf738bb2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/87434d0a8f661b032f13162db36510f2/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/87434d0a8f661b032f13162db36510f2/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/cf558747f9ac8272c3d7ecb14630ea06/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/cf558747f9ac8272c3d7ecb14630ea06/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/58e23487e6e1c3475b769ebe33133629/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/58e23487e6e1c3475b769ebe33133629/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/6e4c54044e3c3e1131e376b88c7696f4/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/6e4c54044e3c3e1131e376b88c7696f4/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/e5085b735acfe6e6a72fbe55f237841d/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/yoni/.gradle/caches/8.11/transforms/e5085b735acfe6e6a72fbe55f237841d/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/f0fddb5d9db99a3e962254413da1ac1d/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/f0fddb5d9db99a3e962254413da1ac1d/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/578a2e6b6d9a598c5951a911adb6884e/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/yoni/.gradle/caches/8.11/transforms/578a2e6b6d9a598c5951a911adb6884e/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/02edfb8fa083dc18f3f9c221c1758bd0/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/02edfb8fa083dc18f3f9c221c1758bd0/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/09379b66a871075d71a5301b07b48257/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/09379b66a871075d71a5301b07b48257/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/05fd7b68b74832803f08d0a54cdd7903/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/05fd7b68b74832803f08d0a54cdd7903/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/bd4a0f4e6fb9ac0eda1d4aa1f5f8e9c0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/bd4a0f4e6fb9ac0eda1d4aa1f5f8e9c0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/5983985e238e2418f984f733d1ec72ad/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/5983985e238e2418f984f733d1ec72ad/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/3a047073f87abb962484091946b9283f/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/3a047073f87abb962484091946b9283f/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/2cb35d0836a407fa49aaf4b0edbc5a90/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/2cb35d0836a407fa49aaf4b0edbc5a90/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/9c1c313c8aa3da3b32524e0458973716/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/9c1c313c8aa3da3b32524e0458973716/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/2555e54c22c7384f880bb000a151f571/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/2555e54c22c7384f880bb000a151f571/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/yoni/.gradle/caches/8.11/transforms/cecd23383ffba18fe6856172a3738449/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/yoni/.gradle/caches/8.11/transforms/cecd23383ffba18fe6856172a3738449/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/728485cf74604f358fb680bef11722b9/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/728485cf74604f358fb680bef11722b9/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/5c5f36d46ddaa2d763ce42754040d86a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/5c5f36d46ddaa2d763ce42754040d86a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/f9df1e34cb3aa3f09bc4d938a3f37c27/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/f9df1e34cb3aa3f09bc4d938a3f37c27/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/1e65b1dca25dd5bc899d85357e8bbd9d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/1e65b1dca25dd5bc899d85357e8bbd9d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/2806a9b194e1790c93ec643593db1e87/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/2806a9b194e1790c93ec643593db1e87/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/yoni/.gradle/caches/8.11/transforms/f07986c4c4fd987428886075b5a33622/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/yoni/.gradle/caches/8.11/transforms/f07986c4c4fd987428886075b5a33622/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/yoni/.gradle/caches/8.11/transforms/9e89242027711219fe37381d04e20b34/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/yoni/.gradle/caches/8.11/transforms/9e89242027711219fe37381d04e20b34/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/yoni/.gradle/caches/8.11/transforms/d3069fed30c0d2641972949e2c4d9a8b/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/yoni/.gradle/caches/8.11/transforms/d3069fed30c0d2641972949e2c4d9a8b/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yoni/.gradle/caches/8.11/transforms/3bd719d487f51573daa6df49317ecd53/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yoni/.gradle/caches/8.11/transforms/3bd719d487f51573daa6df49317ecd53/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/e4e03d997f385e4bdcc5ddb9f1ff63a4/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/e4e03d997f385e4bdcc5ddb9f1ff63a4/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/92679eb4c6ebac62718a3b7bc6d1c5e1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/92679eb4c6ebac62718a3b7bc6d1c5e1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/29a3813876726076d15407d6bcd474d5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/29a3813876726076d15407d6bcd474d5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/65e6cdd71c24c98fb3822818a024cc8e/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/65e6cdd71c24c98fb3822818a024cc8e/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yoni/.gradle/caches/8.11/transforms/190a5aa6b7e2431ccea7417637572208/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yoni/.gradle/caches/8.11/transforms/190a5aa6b7e2431ccea7417637572208/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/3c5d0aeec74be1305af436e8962b9365/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
+ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:15:9-23:19
+MERGED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:15:9-23:19
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-permission#com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-uses-permission#com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:19:13-32
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:17:13-43
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:10:13-91
+meta-data#com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar
+ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:13:17-114
+meta-data#com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar
+ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:13:17-124
+provider#com.google.mlkit.common.internal.MlKitInitProvider
+ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:9:9-13:38
+	android:authorities
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:11:13-69
+	android:exported
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:12:13-37
+	android:initOrder
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:13:13-35
+	android:name
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:10:13-78
+meta-data#com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar
+ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:21:17-120
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/8.11/transforms/1a13d3242b7d61d08056d83cf023896c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132

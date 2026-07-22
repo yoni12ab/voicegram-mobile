@@ -1,62 +1,82 @@
 [
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_foreground.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-anydpi-v26/ic_launcher_foreground.xml"
+        "merged": "com.voicegram.app-merged_res-39:/layout_activity_main.xml.flat",
+        "source": "com.voicegram.app-main-40:/layout/activity_main.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-xxhdpi/ic_launcher_round.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-mdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-hdpi/ic_launcher_round.xml"
+        "merged": "com.voicegram.app-merged_res-39:/layout_activity_bot_list.xml.flat",
+        "source": "com.voicegram.app-main-40:/layout/activity_bot_list.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-hdpi_ic_launcher.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-hdpi/ic_launcher.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-xhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-xxhdpi/ic_launcher.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-hdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-mdpi/ic_launcher_round.xml"
+        "merged": "com.voicegram.app-merged_res-39:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.voicegram.app-main-40:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-mdpi_ic_launcher.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-mdpi/ic_launcher.xml"
+        "merged": "com.voicegram.app-merged_res-39:/layout_activity_chat_list.xml.flat",
+        "source": "com.voicegram.app-main-40:/layout/activity_chat_list.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.voicegram.app-main-32:/drawable/ic_launcher_background.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-mdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-xhdpi/ic_launcher_round.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-xxhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/layout_activity_main.xml.flat",
-        "source": "com.voicegram.app-main-32:/layout/activity_main.xml"
+        "merged": "com.voicegram.app-merged_res-39:/layout_dialog_add_bot.xml.flat",
+        "source": "com.voicegram.app-main-40:/layout/dialog_add_bot.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-xxxhdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-xhdpi_ic_launcher.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-xhdpi/ic_launcher.xml"
+        "merged": "com.voicegram.app-merged_res-39:/layout_activity_call.xml.flat",
+        "source": "com.voicegram.app-main-40:/layout/activity_call.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-xxxhdpi/ic_launcher_round.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-xxxhdpi/ic_launcher.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-xxxhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.voicegram.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.voicegram.app-main-32:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-xhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.voicegram.app-merged_res-39:/drawable_end_call_button.xml.flat",
+        "source": "com.voicegram.app-main-40:/drawable/end_call_button.xml"
+    },
+    {
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-xxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-hdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.voicegram.app-merged_res-39:/mipmap-anydpi-v26_ic_launcher_foreground.xml.flat",
+        "source": "com.voicegram.app-main-40:/mipmap-anydpi-v26/ic_launcher_foreground.xml"
     }
 ]

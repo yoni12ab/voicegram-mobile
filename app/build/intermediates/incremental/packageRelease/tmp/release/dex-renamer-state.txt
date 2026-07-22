@@ -1,4 +1,7 @@
-#Wed Jul 22 07:36:25 IDT 2026
+#Wed Jul 22 14:11:53 IDT 2026
 base.0=/Users/yoni/dev/test.txt/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/Users/yoni/dev/test.txt/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
 path.0=classes.dex
+path.1=classes2.dex
 renamed.0=classes.dex
+renamed.1=classes2.dex

@@ -8,119 +8,260 @@
 8        android:minSdkVersion="21"
 9        android:targetSdkVersion="34" />
 10
-11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:4:5-67
-11-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:4:22-64
-12
-13    <permission
-13-->[androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-14        android:name="com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+11    <!-- Network permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:5:5-67
+12-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-79
+13-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:22-76
+14
+15    <!-- Audio recording permissions -->
+16    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+16-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:5-71
+16-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:22-68
+17    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+17-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:5-80
+17-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:22-77
 18
-19    <application
-19-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-20:19
-20        android:allowBackup="false"
-20-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:7:9-36
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-22        android:extractNativeLibs="true"
-23        android:icon="@mipmap/ic_launcher"
-23-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:8:9-43
-24        android:label="@string/app_name"
-24-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:9-41
-25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:9-54
-26        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
-26-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:11:9-67
-27        <activity
-27-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:12:9-19:20
-28            android:name="com.voicegram.app.MainActivity"
-28-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:13-41
-29            android:exported="true" >
-29-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:13-36
-30            <intent-filter>
-30-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:15:13-18:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:16:17-69
-31-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:16:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:17-77
-33-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:27-74
-34            </intent-filter>
-35        </activity>
+19    <!-- Storage permissions for saving audio files -->
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+20-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:5-81
+20-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:22-78
+21    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+21-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:5-80
+21-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:22-77
+22
+23    <!-- Phone call permissions for call-style interface -->
+24    <uses-permission android:name="android.permission.CALL_PHONE" />
+24-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:5-69
+24-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:17:22-66
+25    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+25-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:18:5-75
+25-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:18:22-72
+26    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+26-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:19:5-72
+26-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:19:22-69
+27
+28    <!-- Notification permissions -->
+29    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+29-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:22:5-77
+29-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:22:22-74
+30
+31    <permission
+31-->[androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+32        android:name="com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.voicegram.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 36
-37        <provider
-37-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-38            android:name="androidx.startup.InitializationProvider"
-38-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-39            android:authorities="com.voicegram.app.androidx-startup"
-39-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-40            android:exported="false" >
-40-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-41            <meta-data
-41-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-42-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-43                android:value="androidx.startup" />
-43-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/91049c653ab2c198597bd169ce5fed06/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-44            <meta-data
-44-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-45-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-46                android:value="androidx.startup" />
-46-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/yoni/.gradle/caches/8.11/transforms/8939b15cc8cbc5d27fba24c277e65e79/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-47            <meta-data
-47-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-48                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-48-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-49                android:value="androidx.startup" />
-49-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-50        </provider>
-51
-52        <receiver
-52-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-53            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-53-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-54            android:directBootAware="false"
-54-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-55            android:enabled="true"
-55-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-56            android:exported="true"
-56-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-57            android:permission="android.permission.DUMP" >
-57-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-58            <intent-filter>
-58-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-59                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-59-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-59-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-60            </intent-filter>
-61            <intent-filter>
-61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-62                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-63            </intent-filter>
-64            <intent-filter>
-64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-65                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-66            </intent-filter>
-67            <intent-filter>
-67-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-68                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/6860c3b3c93cf7b7ec866b3af296473e/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-69            </intent-filter>
-70        </receiver>
-71    </application>
-72
-73</manifest>
+37    <application
+37-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:24:5-48:19
+38        android:allowBackup="false"
+38-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:25:9-36
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.12.0] /Users/yoni/.gradle/caches/8.11/transforms/76e39df6c9aed905215cb8def8a18789/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+40        android:extractNativeLibs="true"
+41        android:icon="@mipmap/ic_launcher"
+41-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:26:9-43
+42        android:label="@string/app_name"
+42-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:27:9-41
+43        android:roundIcon="@mipmap/ic_launcher_round"
+43-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:28:9-54
+44        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+44-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:29:9-67
+45        <activity
+45-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:30:9-37:20
+46            android:name="com.voicegram.app.MainActivity"
+46-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:31:13-41
+47            android:exported="true" >
+47-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:32:13-36
+48            <intent-filter>
+48-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:33:13-36:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:34:17-69
+49-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:34:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:35:17-77
+51-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:35:27-74
+52            </intent-filter>
+53        </activity>
+54        <activity
+54-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:38:9-40:39
+55            android:name="com.voicegram.app.ui.BotListActivity"
+55-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:39:13-47
+56            android:exported="true" />
+56-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:40:13-36
+57        <activity
+57-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:41:9-43:39
+58            android:name="com.voicegram.app.ui.ChatListActivity"
+58-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:42:13-48
+59            android:exported="true" />
+59-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:43:13-36
+60        <activity
+60-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:44:9-47:52
+61            android:name="com.voicegram.app.ui.CallActivity"
+61-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:45:13-44
+62            android:exported="true"
+62-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:46:13-36
+63            android:screenOrientation="portrait" />
+63-->/Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:47:13-49
+64
+65        <service
+65-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:9:9-15:19
+66            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+66-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:10:13-91
+67            android:directBootAware="true"
+67-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:17:13-43
+68            android:exported="false" >
+68-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:11:13-37
+69            <meta-data
+69-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:12:13-14:85
+70                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+70-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:13:17-114
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/yoni/.gradle/caches/8.11/transforms/dfc931decf86e94b42c47c96d3d58158/transformed/jetified-play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:14:17-82
+72            <meta-data
+72-->[com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+73                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+73-->[com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:13:17-124
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.mlkit:vision-common:17.3.0] /Users/yoni/.gradle/caches/8.11/transforms/c76983452435a9be9578e3dce67d5a5e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:14:17-82
+75            <meta-data
+75-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:20:13-22:85
+76                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+76-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:21:17-120
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:22:17-82
+78        </service>
+79
+80        <provider
+80-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:9:9-13:38
+81            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+81-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:10:13-78
+82            android:authorities="com.voicegram.app.mlkitinitprovider"
+82-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:11:13-69
+83            android:exported="false"
+83-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:12:13-37
+84            android:initOrder="99" />
+84-->[com.google.mlkit:common:18.8.0] /Users/yoni/.gradle/caches/8.11/transforms/fd7775a2fbe8742b4e7a055b0db1f075/transformed/jetified-common-18.8.0/AndroidManifest.xml:13:13-35
+85
+86        <activity
+86-->[com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+87            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+87-->[com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+88            android:exported="false"
+88-->[com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+89            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+89-->[com.google.android.gms:play-services-base:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/b954d4b92d90152dfdfabdb363b514b8/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+90
+91        <meta-data
+91-->[com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+92            android:name="com.google.android.gms.version"
+92-->[com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+93            android:value="@integer/google_play_services_version" />
+93-->[com.google.android.gms:play-services-basement:18.1.0] /Users/yoni/.gradle/caches/8.11/transforms/1a2221be5bc073db53508dc5d2416648/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+94
+95        <provider
+95-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+96            android:name="androidx.startup.InitializationProvider"
+96-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+97            android:authorities="com.voicegram.app.androidx-startup"
+97-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+98            android:exported="false" >
+98-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+99            <meta-data
+99-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+100-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+101                android:value="androidx.startup" />
+101-->[androidx.emoji2:emoji2:1.2.0] /Users/yoni/.gradle/caches/8.11/transforms/a0059a397b5c89fe3f0087a0fb6a6f10/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+103-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+104                android:value="androidx.startup" />
+104-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/yoni/.gradle/caches/8.11/transforms/f3daeb8ff70118a8c8ded6cbb6e44595/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+105            <meta-data
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+106                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+107                android:value="androidx.startup" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+108        </provider>
+109
+110        <receiver
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+111            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+112            android:directBootAware="false"
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+113            android:enabled="true"
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+114            android:exported="true"
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+115            android:permission="android.permission.DUMP" >
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+116            <intent-filter>
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+117                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+118            </intent-filter>
+119            <intent-filter>
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+120                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+121            </intent-filter>
+122            <intent-filter>
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+123                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+124            </intent-filter>
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+126                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/5c9ea058a8abd38683ecb5e372fa9e5f/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+127            </intent-filter>
+128        </receiver>
+129
+130        <service
+130-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+131            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+131-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+132            android:exported="false" >
+132-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+133            <meta-data
+133-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+134                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+134-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+135                android:value="cct" />
+135-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/yoni/.gradle/caches/8.11/transforms/ce328aa0f3a9cd5067bdeb9782baed4b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+136        </service>
+137        <service
+137-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+138            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+138-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+139            android:exported="false"
+139-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+140            android:permission="android.permission.BIND_JOB_SERVICE" >
+140-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+141        </service>
+142
+143        <receiver
+143-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+144            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+144-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+145            android:exported="false" />
+145-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/yoni/.gradle/caches/8.11/transforms/48b0cd677c17803f8b69c5527c5ace2c/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+146    </application>
+147
+148</manifest>

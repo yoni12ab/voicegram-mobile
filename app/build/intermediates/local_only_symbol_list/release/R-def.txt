@@ -1,8 +1,25 @@
 R_DEF: Internal format may change without notice
 local
 color ic_launcher_background
+drawable end_call_button
 drawable ic_launcher_background
+id addBotButton
+id botListButton
+id botListView
+id botNameEditText
+id botTokenEditText
+id chatListView
+id contactNameTextView
+id endCallButton
+id progressBar
+id recordingIndicator
+id statusTextView
+id timerTextView
+layout activity_bot_list
+layout activity_call
+layout activity_chat_list
 layout activity_main
+layout dialog_add_bot
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

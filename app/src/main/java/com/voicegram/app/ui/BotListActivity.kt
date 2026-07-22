@@ -23,7 +23,7 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
     private lateinit var addBotButton: Button
     private val botList = ArrayList<BotItem>()
     private lateinit var adapter: BotAdapter
-    private val botValidator = BotValidator()
+    private val botValidator = BotValidator(this)
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

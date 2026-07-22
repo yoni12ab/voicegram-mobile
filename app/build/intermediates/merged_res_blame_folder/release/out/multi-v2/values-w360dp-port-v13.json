@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.voicegram.app-mergeReleaseResources-29:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.voicegram.app-mergeReleaseResources-37:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/Users/yoni/.gradle/caches/8.11/transforms/b8c78e3cf8ee38eae81aa1797d145283/transformed/material-1.10.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

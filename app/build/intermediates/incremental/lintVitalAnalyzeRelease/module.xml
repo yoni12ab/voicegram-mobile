@@ -4,7 +4,7 @@
     name=":app"
     type="APP"
     maven="VoiceGram:app:"
-    agpVersion="8.1.0"
+    agpVersion="8.1.4"
     buildFolder="build"
     bootClassPath="/Users/yoni/Library/Android/sdk/platforms/android-34/android.jar:/Users/yoni/Library/Android/sdk/build-tools/33.0.1/core-lambda-stubs.jar"
     javaSourceLevel="1.8"

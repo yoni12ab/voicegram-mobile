@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,23 +13,27 @@ import androidx.core.content.ContextCompat
 import com.voicegram.app.R
 import com.voicegram.app.service.SpeechToTextConverter
 import com.voicegram.app.service.TextToSpeechConverter
-import com.voicegram.app.service.VoiceRecorder
+import com.voicegram.app.service.TelegramService
+import com.voicegram.app.service.NetworkUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispatchers.Main) {
     
-    private lateinit var voiceRecorder: VoiceRecorder
     private lateinit var speechToTextConverter: SpeechToTextConverter
     private lateinit var textToSpeechConverter: TextToSpeechConverter
+    private lateinit var telegramService: TelegramService
     
     private lateinit var statusTextView: TextView
     private lateinit var contactNameTextView: TextView
     private lateinit var endCallButton: Button
+    private lateinit var progressBar: ProgressBar
     
     private var botToken: String? = null
     private var botName: String? = null
+    private var lastUpdateId: Long = 0
+    private var isPolling = false
     
     private val RECORD_AUDIO_PERMISSION = 1
     
@@ -41,9 +46,9 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         botName = intent.getStringExtra("bot_name")
         
         // Initialize services
-        voiceRecorder = VoiceRecorder(this)
         speechToTextConverter = SpeechToTextConverter(this)
         textToSpeechConverter = TextToSpeechConverter(this)
+        telegramService = TelegramService()
         
         // Setup UI
         setupUI()
@@ -56,6 +61,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         statusTextView = findViewById(R.id.statusTextView)
         contactNameTextView = findViewById(R.id.contactNameTextView)
         endCallButton = findViewById(R.id.endCallButton)
+        progressBar = findViewById(R.id.progressBar)
         
         contactNameTextView.text = botName ?: "Bot"
         
@@ -64,8 +70,22 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         }
     }
     
+    private fun showLoading(message: String) {
+        statusTextView.text = message
+        progressBar.visibility = ProgressBar.VISIBLE
+    }
+    
+    private fun hideLoading() {
+        progressBar.visibility = ProgressBar.GONE
+    }
+    
+    private fun showStatus(message: String) {
+        statusTextView.text = message
+        hideLoading()
+    }
+    
     private fun startVoiceRecording() {
-        statusTextView.text = "Connected to @$botName"
+        showStatus("Connected to @$botName")
         
         // Check for audio recording permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) 
@@ -76,62 +96,114 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
                 RECORD_AUDIO_PERMISSION
             )
         } else {
-            voiceRecorder.startRecording { audioFile ->
-                statusTextView.text = "Recording..."
-            }
+            // Start speech recognition directly
+            showLoading("Listening... Speak now")
+            speechToTextConverter.startLiveSpeechRecognition(
+                onResult = { text ->
+                    showStatus("Recognized: $text")
+                    sendToBot(text)
+                },
+                onError = { error ->
+                    showStatus("Speech recognition error")
+                    Toast.makeText(applicationContext, "Speech recognition failed: ${error.message}", Toast.LENGTH_LONG).show()
+                }
+            )
         }
     }
     
     private fun stopVoiceRecording() {
-        voiceRecorder.stopRecording { audioFile ->
-            if (audioFile != null) {
-                statusTextView.text = "Processing audio..."
-                processAudioFile(audioFile)
-            }
-        }
+        speechToTextConverter.stopListening()
     }
     
     private fun processAudioFile(audioFile: java.io.File) {
-        speechToTextConverter.convertAudioToText(audioFile, 
-            { text ->
-                statusTextView.text = "Sending to bot..."
-                sendToBot(text)
-            },
-            { error ->
-                statusTextView.text = "Error: ${error.message}"
-            }
-        )
+        // No longer needed with live speech recognition
+        // This method is kept for compatibility
     }
     
     private fun sendToBot(text: String) {
         launch {
-            // Placeholder for bot interaction
-            // In production, this would use the Telegram Bot API to send messages
-            statusTextView.text = "Message sent to @$botName"
+            // Check network connectivity
+            if (!NetworkUtils.isNetworkAvailable(this@CallActivity)) {
+                showStatus("No internet connection")
+                Toast.makeText(applicationContext, "Please check your internet connection", Toast.LENGTH_LONG).show()
+                return@launch
+            }
             
-            // Simulate a bot response
-            val botResponse = "This is a simulated response from @$botName. Your message was: $text"
-            speakBotResponse(botResponse)
+            showLoading("Sending to @$botName (${NetworkUtils.getNetworkType(this@CallActivity)})...")
+            
+            // Use the bot token as chat ID for now (bot can receive messages)
+            val result = telegramService.sendMessage(botToken ?: "", botToken ?: "", text)
+            
+            if (result.success) {
+                showStatus("Message sent to @$botName")
+                
+                // Start polling for bot responses
+                startBotResponsePolling()
+            } else {
+                showStatus("Error: " + (result.error ?: "Unknown error"))
+                Toast.makeText(applicationContext, "Failed to send message: " + (result.error ?: "Unknown error"), Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+    
+    private fun startBotResponsePolling() {
+        if (isPolling) return
+        isPolling = true
+        
+        launch {
+            showLoading("Waiting for bot response...")
+            
+            // Poll for responses with timeout
+            val maxPolls = 10 // Maximum number of polling attempts
+            var pollCount = 0
+            
+            while (isPolling && pollCount < maxPolls) {
+                try {
+                    val updates = telegramService.getBotUpdates(botToken ?: "", lastUpdateId + 1)
+                    
+                    if (updates.isNotEmpty()) {
+                        val lastMessage = updates.last()
+                        lastUpdateId = lastMessage.updateId
+                        
+                        if (lastMessage.text.isNotEmpty()) {
+                            isPolling = false
+                            showStatus("Response received")
+                            speakBotResponse(lastMessage.text)
+                            return@launch
+                        }
+                    }
+                    
+                    pollCount++
+                    kotlinx.coroutines.delay(1000) // Wait 1 second between polls
+                    
+                } catch (e: Exception) {
+                    // Continue polling on error
+                    pollCount++
+                    kotlinx.coroutines.delay(1000)
+                }
+            }
+            
+            // Timeout reached
+            isPolling = false
+            showStatus("No response received from @$botName")
+            Toast.makeText(applicationContext, "Bot didn't respond within timeout", Toast.LENGTH_LONG).show()
         }
     }
     
     private fun speakBotResponse(text: String) {
-        statusTextView.text = "Bot: $text"
+        showStatus("Bot: $text")
         textToSpeechConverter.speak(text) {
-            statusTextView.text = "Ready to record"
+            showStatus("Ready to speak")
         }
     }
     
     private fun endCall() {
-        if (voiceRecorder.isRecording()) {
-            stopVoiceRecording()
-        }
-        
-        statusTextView.text = "Call ended"
+        isPolling = false // Stop polling
+        speechToTextConverter.stopListening()
+        showStatus("Call ended")
         
         // Cleanup
-        // voiceRecorder.release() - Not implemented in current version
-        // speechToTextConverter.release() - No resources to release
+        speechToTextConverter.release()
         textToSpeechConverter.release()
         
         finish()
@@ -155,8 +227,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
     
     override fun onDestroy() {
         super.onDestroy()
-        // voiceRecorder.release() - Not implemented in current version
-        // speechToTextConverter.release() - No resources to release
+        speechToTextConverter.release()
         textToSpeechConverter.release()
     }
 }
