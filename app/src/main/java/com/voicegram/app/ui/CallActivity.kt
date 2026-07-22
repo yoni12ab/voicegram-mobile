@@ -88,6 +88,13 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
     private fun startVoiceRecording() {
         showStatus("Connected to @$botName")
         
+        // Check if speech recognition is available on this device
+        if (!speechToTextConverter.isSpeechRecognitionAvailable()) {
+            showStatus("Speech recognition not available")
+            Toast.makeText(applicationContext, "Speech recognition is not available on this device. Please check if Google speech services are installed.", Toast.LENGTH_LONG).show()
+            return
+        }
+        
         // Check for audio recording permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) 
             != PackageManager.PERMISSION_GRANTED) {
@@ -105,8 +112,22 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
                     sendToBot(text)
                 },
                 onError = { error ->
-                    showStatus("Speech recognition error")
-                    Toast.makeText(applicationContext, "Speech recognition failed: ${error.message}", Toast.LENGTH_LONG).show()
+                    val errorMessage = error.message ?: "Unknown error"
+                    showStatus("Error: $errorMessage")
+                    Toast.makeText(applicationContext, "Speech recognition failed: $errorMessage", Toast.LENGTH_LONG).show()
+                    
+                    // Provide specific guidance based on error type
+                    when {
+                        errorMessage.contains("permission", ignoreCase = true) -> {
+                            Toast.makeText(applicationContext, "Please grant microphone permission in Settings > Apps > VoiceGram > Permissions", Toast.LENGTH_LONG).show()
+                        }
+                        errorMessage.contains("available", ignoreCase = true) -> {
+                            Toast.makeText(applicationContext, "Please install Google speech services or check device compatibility", Toast.LENGTH_LONG).show()
+                        }
+                        errorMessage.contains("microphone", ignoreCase = true) -> {
+                            Toast.makeText(applicationContext, "Please check if your microphone is working and not blocked by another app", Toast.LENGTH_LONG).show()
+                        }
+                    }
                 }
             )
         }
