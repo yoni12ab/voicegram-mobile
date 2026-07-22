@@ -28,6 +28,7 @@ class VoiceRecorder(private val context: Context) {
             
         } catch (e: Exception) {
             e.printStackTrace()
+            @Suppress("UNUSED_EXPRESSION")
             stopRecording { null }
         }
     }

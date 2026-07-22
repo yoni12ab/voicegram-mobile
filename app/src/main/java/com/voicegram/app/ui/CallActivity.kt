@@ -116,7 +116,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         speechToTextConverter.stopListening()
     }
     
-    private fun processAudioFile(audioFile: java.io.File) {
+    private fun processAudioFile(@Suppress("UNUSED_PARAMETER") audioFile: java.io.File) {
         // No longer needed with live speech recognition
         // This method is kept for compatibility
     }
@@ -136,8 +136,8 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
             val validChatId = telegramService.getRecentChatId(botToken ?: "")
             
             if (validChatId == null) {
-                showStatus("No chat found. Please send /start to the bot first.")
-                Toast.makeText(applicationContext, "Please send /start to @$botName in Telegram first", Toast.LENGTH_LONG).show()
+                showStatus("Setup required: Send /start to @$botName in Telegram")
+                Toast.makeText(applicationContext, "Open Telegram, search for @$botName, and send /start to activate the bot", Toast.LENGTH_LONG).show()
                 return@launch
             }
             

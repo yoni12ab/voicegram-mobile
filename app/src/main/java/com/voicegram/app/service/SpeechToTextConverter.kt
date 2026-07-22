@@ -12,7 +12,7 @@ class SpeechToTextConverter(private val context: Context) {
     
     private var speechRecognizer: SpeechRecognizer? = null
     
-    fun convertAudioToText(audioFile: File, onResult: (String) -> Unit, onError: (Exception) -> Unit) {
+    fun convertAudioToText(@Suppress("UNUSED_PARAMETER") audioFile: File, onResult: (String) -> Unit, onError: (Exception) -> Unit) {
         // For audio files, we'll use live speech recognition instead
         // Android SpeechRecognizer works best with live audio
         startLiveSpeechRecognition(onResult, onError)

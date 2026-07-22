@@ -110,7 +110,8 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
                 botList.add(newBot)
                 adapter.notifyDataSetChanged()
                 saveBots()
-                Toast.makeText(applicationContext, "Bot added successfully: @" + validationResult.botName, Toast.LENGTH_SHORT).show()
+                val botUsername = validationResult.botName ?: name
+                Toast.makeText(applicationContext, "Bot added: @$botUsername. Tip: Send /start to the bot in Telegram first!", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(applicationContext, "Invalid bot token: " + validationResult.error, Toast.LENGTH_SHORT).show()
             }
