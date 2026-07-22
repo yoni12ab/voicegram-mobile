@@ -15,7 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-data class BotItem(val id: String, val name: String, val token: String)
+data class BotItem(val id: String, val name: String, val token: String, val chatId: String? = null)
 
 class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispatchers.Main) {
     
@@ -77,6 +77,7 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
         val dialogView = layoutInflater.inflate(R.layout.dialog_add_bot, null)
         val botNameEditText = dialogView.findViewById<EditText>(R.id.botNameEditText)
         val botTokenEditText = dialogView.findViewById<EditText>(R.id.botTokenEditText)
+        val chatIdEditText = dialogView.findViewById<EditText>(R.id.chatIdEditText)
         
         AlertDialog.Builder(this)
             .setTitle("Add Bot")
@@ -84,18 +85,19 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
             .setPositiveButton("Add") { _, _ ->
                 val botName = botNameEditText.text.toString().trim()
                 val botToken = botTokenEditText.text.toString().trim()
+                val chatId = chatIdEditText.text.toString().trim()
                 
                 if (botName.isNotEmpty() && botToken.isNotEmpty()) {
-                    addBot(botName, botToken)
+                    addBot(botName, botToken, if (chatId.isNotEmpty()) chatId else null)
                 } else {
-                    Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please fill in bot name and token", Toast.LENGTH_SHORT).show()
                 }
             }
             .setNegativeButton("Cancel", null)
             .show()
     }
     
-    private fun addBot(name: String, token: String) {
+    private fun addBot(name: String, token: String, chatId: String? = null) {
         Toast.makeText(this, "Validating bot token...", Toast.LENGTH_SHORT).show()
         
         launch {
@@ -105,13 +107,19 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
                 val newBot = BotItem(
                     id = (botList.size + 1).toString(),
                     name = validationResult.botName ?: name,
-                    token = token
+                    token = token,
+                    chatId = chatId
                 )
                 botList.add(newBot)
                 adapter.notifyDataSetChanged()
                 saveBots()
                 val botUsername = validationResult.botName ?: name
-                Toast.makeText(applicationContext, "Bot added: @$botUsername. Tip: Send /start to the bot in Telegram first!", Toast.LENGTH_LONG).show()
+                val message = if (chatId != null) {
+                    "Bot added: @$botUsername with chat ID. Ready to use!"
+                } else {
+                    "Bot added: @$botUsername. Tip: Send /start to the bot in Telegram first!"
+                }
+                Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(applicationContext, "Invalid bot token: " + validationResult.error, Toast.LENGTH_SHORT).show()
             }
@@ -145,6 +153,7 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
         botList.forEachIndexed { index, bot ->
             editor.putString("bot_${index}_name", bot.name)
             editor.putString("bot_${index}_token", bot.token)
+            editor.putString("bot_${index}_chatId", bot.chatId ?: "")
         }
         editor.apply()
     }
@@ -154,6 +163,7 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
         intent.putExtra("bot_id", bot.id)
         intent.putExtra("bot_name", bot.name)
         intent.putExtra("bot_token", bot.token)
+        intent.putExtra("bot_chat_id", bot.chatId)
         startActivity(intent)
     }
 }

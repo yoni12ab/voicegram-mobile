@@ -23,6 +23,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Bot Token">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -34,11 +35,34 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Your Telegram Chat ID (Optional - helps avoid 403 errors)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/chatIdEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Get your bot token from @BotFather"
+        android:text="Get chat ID: Send /start to @userinfobot in Telegram"
+        android:textColor="#666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Get bot token from @BotFather"
         android:textColor="#666666"
         android:textSize="12sp" />
 

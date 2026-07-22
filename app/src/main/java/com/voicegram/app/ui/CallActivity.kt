@@ -33,6 +33,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
     
     private var botToken: String? = null
     private var botName: String? = null
+    private var manualChatId: String? = null // User-provided chat ID
     private var chatId: Long? = null
     private var lastUpdateId: Long = 0
     private var isPolling = false
@@ -46,6 +47,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         // Get bot information from intent
         botToken = intent.getStringExtra("bot_token")
         botName = intent.getStringExtra("bot_name")
+        manualChatId = intent.getStringExtra("bot_chat_id")
         
         // Initialize services
         speechToTextConverter = SpeechToTextConverter(this)
@@ -152,22 +154,25 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
                 return@launch
             }
             
-            showLoading("Getting chat ID...")
-            
-            // Get a valid chat ID first
-            val validChatId = telegramService.getRecentChatId(botToken ?: "")
-            
-            if (validChatId == null) {
-                showStatus("Setup required: Send /start to @$botName in Telegram")
-                Toast.makeText(applicationContext, "Open Telegram, search for @$botName, and send /start to activate the bot", Toast.LENGTH_LONG).show()
-                return@launch
+            // Use manual chat ID if provided, otherwise try to detect automatically
+            val targetChatId = if (manualChatId != null && manualChatId!!.isNotEmpty()) {
+                showLoading("Using manual chat ID...")
+                manualChatId!!
+            } else {
+                showLoading("Getting chat ID...")
+                val detectedChatId = telegramService.getRecentChatId(botToken ?: "")
+                if (detectedChatId == null) {
+                    showStatus("Setup required: Send /start to @$botName in Telegram")
+                    Toast.makeText(applicationContext, "Open Telegram, search for @$botName, and send /start to activate the bot", Toast.LENGTH_LONG).show()
+                    return@launch
+                }
+                detectedChatId.toString()
             }
             
-            chatId = validChatId
             showLoading("Sending to @$botName (${NetworkUtils.getNetworkType(this@CallActivity)})...")
             
-            // Use the valid chat ID for sending messages
-            val result = telegramService.sendMessage(botToken ?: "", validChatId.toString(), text)
+            // Use the chat ID for sending messages
+            val result = telegramService.sendMessage(botToken ?: "", targetChatId, text)
             
             if (result.success) {
                 showStatus("Message sent to @$botName")
@@ -181,9 +186,15 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
                 
                 // Provide specific guidance for 403 errors
                 if (errorMessage.contains("403", ignoreCase = true)) {
+                    val guidanceMessage = if (manualChatId != null && manualChatId!!.isNotEmpty()) {
+                        "The manual chat ID you provided doesn't work with this bot.\n\nPlease:\n1. Get your correct chat ID from @userinfobot in Telegram\n2. Edit the bot and update the chat ID\n3. Try again"
+                    } else {
+                        "To fix this 403 error:\n\nOption 1: Send /start to @$botName in Telegram\n\nOption 2: Add your chat ID manually:\n1. Get your chat ID from @userinfobot in Telegram\n2. Edit the bot in VoiceGram and add the chat ID\n3. This prevents 403 errors"
+                    }
+                    
                     AlertDialog.Builder(this@CallActivity)
-                        .setTitle("Setup Required")
-                        .setMessage("To fix this 403 error:\n\n1. Open Telegram\n2. Search for @$botName\n3. Send /start to the bot\n4. Then try VoiceGram again\n\nThis is required for Telegram bots to work.")
+                        .setTitle("Chat ID Error")
+                        .setMessage(guidanceMessage)
                         .setPositiveButton("OK", null)
                         .show()
                 }
