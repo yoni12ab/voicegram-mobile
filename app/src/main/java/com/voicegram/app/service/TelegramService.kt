@@ -24,8 +24,6 @@ class TelegramService {
     
     suspend fun sendMessage(botToken: String, chatId: String, text: String): MessageResult = withContext(Dispatchers.IO) {
         try {
-            // For now, we'll send to the bot itself (most bots can receive messages)
-            // In a real implementation, you'd need the actual user's chat ID
             val url = "https://api.telegram.org/bot$botToken/sendMessage"
             
             val json = """
@@ -60,24 +58,45 @@ class TelegramService {
                     )
                 } else {
                     val errorDescription = jsonResponse.get("description")?.asString ?: "Unknown error"
+                    val errorCode = jsonResponse.get("error_code")?.asInt ?: 0
+                    
+                    // Provide more detailed error information
+                    val detailedError = when (errorCode) {
+                        403 -> "403 Forbidden: Bot cannot send messages to this chat. Please send /start to the bot in Telegram first."
+                        400 -> "400 Bad Request: Invalid chat ID or message format. Error: $errorDescription"
+                        401 -> "401 Unauthorized: Invalid bot token"
+                        429 -> "429 Too Many Requests: Rate limited by Telegram"
+                        else -> "Telegram API error ($errorCode): $errorDescription"
+                    }
+                    
                     MessageResult(
                         success = false,
                         messageId = null,
-                        error = errorDescription
+                        error = detailedError
                     )
                 }
             } else {
+                // Handle HTTP errors with more detail
+                val errorDetails = when (response.code) {
+                    403 -> "403 Forbidden: Bot doesn't have permission to send to this chat. Send /start to your bot in Telegram first."
+                    401 -> "401 Unauthorized: Check your bot token"
+                    404 -> "404 Not Found: Bot token or API endpoint incorrect"
+                    429 -> "429 Too Many Requests: Telegram rate limit"
+                    500 -> "500 Server Error: Telegram API is down"
+                    else -> "HTTP error ${response.code}: ${response.message}"
+                }
+                
                 MessageResult(
                     success = false,
                     messageId = null,
-                    error = "HTTP error: ${response.code}"
+                    error = errorDetails
                 )
             }
         } catch (e: Exception) {
             MessageResult(
                 success = false,
                 messageId = null,
-                error = e.message ?: "Network error"
+                error = "Network error: ${e.message}"
             )
         }
     }
@@ -140,26 +159,34 @@ class TelegramService {
     
     suspend fun getRecentChatId(botToken: String): Long? = withContext(Dispatchers.IO) {
         try {
-            // Get recent updates to find a valid chat ID
-            val updates = getBotUpdates(botToken, 0)
-            if (updates.isNotEmpty()) {
-                // Return the most recent chat ID
-                return@withContext updates.last().chatId
-            }
-            
-            // If no updates, try to get bot info and use bot ID as fallback
-            val request = Request.Builder()
+            // First, try to get bot info to get the bot's own ID
+            val botRequest = Request.Builder()
                 .url("https://api.telegram.org/bot$botToken/getMe")
                 .build()
             
-            val response = client.newCall(request).execute()
-            val responseBody = response.body?.string()
+            val botResponse = client.newCall(botRequest).execute()
+            val botResponseBody = botResponse.body?.string()
             
-            if (response.isSuccessful && responseBody != null) {
-                val json = JsonParser.parseString(responseBody).asJsonObject
+            if (botResponse.isSuccessful && botResponseBody != null) {
+                val json = JsonParser.parseString(botResponseBody).asJsonObject
                 if (json.get("ok").asBoolean) {
                     val result = json.getAsJsonObject("result")
-                    return@withContext result.get("id").asLong
+                    val botId = result.get("id").asLong
+                    
+                    // Try to get recent updates to find a valid chat ID
+                    val updates = getBotUpdates(botToken, 0)
+                    if (updates.isNotEmpty()) {
+                        // Return the most recent chat ID from actual user messages
+                        val userMessages = updates.filter { it.fromId != botId }
+                        if (userMessages.isNotEmpty()) {
+                            return@withContext userMessages.last().chatId
+                        }
+                        // If no user messages, use the most recent chat ID
+                        return@withContext updates.last().chatId
+                    }
+                    
+                    // Fallback: try using the bot's own ID (some bots can receive messages this way)
+                    return@withContext botId
                 }
             }
             

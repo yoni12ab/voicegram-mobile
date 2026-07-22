@@ -1,6 +1,7 @@
 package com.voicegram.app.ui
 
 import android.Manifest
+import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
@@ -174,8 +175,18 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
                 // Start polling for bot responses
                 startBotResponsePolling()
             } else {
-                showStatus("Error: " + (result.error ?: "Unknown error"))
-                Toast.makeText(applicationContext, "Failed to send message: " + (result.error ?: "Unknown error"), Toast.LENGTH_LONG).show()
+                val errorMessage = result.error ?: "Unknown error"
+                showStatus("Error: $errorMessage")
+                Toast.makeText(applicationContext, "Failed to send message: $errorMessage", Toast.LENGTH_LONG).show()
+                
+                // Provide specific guidance for 403 errors
+                if (errorMessage.contains("403", ignoreCase = true)) {
+                    AlertDialog.Builder(this@CallActivity)
+                        .setTitle("Setup Required")
+                        .setMessage("To fix this 403 error:\n\n1. Open Telegram\n2. Search for @$botName\n3. Send /start to the bot\n4. Then try VoiceGram again\n\nThis is required for Telegram bots to work.")
+                        .setPositiveButton("OK", null)
+                        .show()
+                }
             }
         }
     }
