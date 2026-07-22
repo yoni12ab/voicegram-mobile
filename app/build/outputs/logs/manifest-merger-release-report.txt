@@ -46,7 +46,6 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/yoni/.gradle/caches/8.11/transforms/201a2be68f4fa3f6c484d4009f66b28d/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gradle/caches/8.11/transforms/8ddb777488a3988aa5e9ca6b21ba6250/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
 	package
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
@@ -54,9 +53,13 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yoni/.gra
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:5:5-20:19
-INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:5:5-20:19
+ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-20:19
+INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:5-20:19
 MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] /Users/yoni/.gradle/caches/8.11/transforms/33a25ab601b74e0905de1afb655da0fb/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yoni/.gradle/caches/8.11/transforms/e3997326f87f513fae9d5a1859269ba0/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -77,24 +80,22 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yoni/.gradle/caches/
 		INJECTED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /Users/yoni/.gradle/caches/8.11/transforms/153839148aa19c5fdb0e70ccbe4442be/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-	android:supportsRtl
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:7:9-36
 	android:theme
 		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:11:9-67
-activity#com.voicegram.app.ui.MainActivity
+activity#com.voicegram.app.MainActivity
 ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:12:9-19:20
 	android:exported
 		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:14:13-36
 	android:name
-		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:13-44
+		ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:13:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/yoni/dev/test.txt/app/src/main/AndroidManifest.xml:15:13-18:29
 action#android.intent.action.MAIN
