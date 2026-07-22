@@ -111,6 +111,8 @@ class TelegramService {
                             val from = message.getAsJsonObject("from")
                             val fromId = from.get("id").asLong
                             val fromName = from.get("first_name").asString
+                            val chat = message.getAsJsonObject("chat")
+                            val chatId = chat.get("id").asLong
                             
                             messages.add(BotMessage(
                                 updateId = updateId,
@@ -118,6 +120,7 @@ class TelegramService {
                                 text = text,
                                 fromId = fromId,
                                 fromName = fromName,
+                                chatId = chatId,
                                 timestamp = message.get("date").asLong
                             ))
                         }
@@ -135,6 +138,37 @@ class TelegramService {
         }
     }
     
+    suspend fun getRecentChatId(botToken: String): Long? = withContext(Dispatchers.IO) {
+        try {
+            // Get recent updates to find a valid chat ID
+            val updates = getBotUpdates(botToken, 0)
+            if (updates.isNotEmpty()) {
+                // Return the most recent chat ID
+                return@withContext updates.last().chatId
+            }
+            
+            // If no updates, try to get bot info and use bot ID as fallback
+            val request = Request.Builder()
+                .url("https://api.telegram.org/bot$botToken/getMe")
+                .build()
+            
+            val response = client.newCall(request).execute()
+            val responseBody = response.body?.string()
+            
+            if (response.isSuccessful && responseBody != null) {
+                val json = JsonParser.parseString(responseBody).asJsonObject
+                if (json.get("ok").asBoolean) {
+                    val result = json.getAsJsonObject("result")
+                    return@withContext result.get("id").asLong
+                }
+            }
+            
+            null
+        } catch (e: Exception) {
+            null
+        }
+    }
+    
     data class MessageResult(
         val success: Boolean,
         val messageId: Int?,
@@ -147,6 +181,7 @@ class TelegramService {
         val text: String,
         val fromId: Long,
         val fromName: String,
+        val chatId: Long,
         val timestamp: Long
     )
 }

@@ -32,6 +32,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
     
     private var botToken: String? = null
     private var botName: String? = null
+    private var chatId: Long? = null
     private var lastUpdateId: Long = 0
     private var isPolling = false
     
@@ -129,10 +130,22 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
                 return@launch
             }
             
+            showLoading("Getting chat ID...")
+            
+            // Get a valid chat ID first
+            val validChatId = telegramService.getRecentChatId(botToken ?: "")
+            
+            if (validChatId == null) {
+                showStatus("No chat found. Please send /start to the bot first.")
+                Toast.makeText(applicationContext, "Please send /start to @$botName in Telegram first", Toast.LENGTH_LONG).show()
+                return@launch
+            }
+            
+            chatId = validChatId
             showLoading("Sending to @$botName (${NetworkUtils.getNetworkType(this@CallActivity)})...")
             
-            // Use the bot token as chat ID for now (bot can receive messages)
-            val result = telegramService.sendMessage(botToken ?: "", botToken ?: "", text)
+            // Use the valid chat ID for sending messages
+            val result = telegramService.sendMessage(botToken ?: "", validChatId.toString(), text)
             
             if (result.success) {
                 showStatus("Message sent to @$botName")
