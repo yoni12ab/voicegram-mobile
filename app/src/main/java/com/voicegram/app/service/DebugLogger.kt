@@ -12,6 +12,7 @@ object DebugLogger {
     private const val TAG = "VoiceGram"
     private const val LOG_FILE = "voicegram_debug.log"
     private val logEntries = mutableListOf<String>()
+    private val errorEntries = mutableListOf<String>() // Track recent errors separately
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.getDefault())
     
     fun log(message: String, level: LogLevel = LogLevel.INFO) {
@@ -50,9 +51,36 @@ object DebugLogger {
     }
     
     fun logError(message: String, error: Throwable? = null) {
+        val timestamp = dateFormat.format(Date())
+        val errorEntry = "[$timestamp] [ERROR] $message"
+        
+        // Add to error entries
+        errorEntries.add(errorEntry)
+        if (errorEntries.size > 10) {
+            errorEntries.removeAt(0) // Keep only last 10 errors
+        }
+        
         log("ERROR: $message", LogLevel.ERROR)
         error?.let {
-            log("Stack trace: ${Log.getStackTraceString(it)}", LogLevel.ERROR)
+            val stackTrace = Log.getStackTraceString(it)
+            errorEntries.add("[$timestamp] [ERROR] Stack: $stackTrace")
+            log("Stack trace: $stackTrace", LogLevel.ERROR)
+        }
+    }
+    
+    fun getLastErrorMessage(): String {
+        return if (errorEntries.isNotEmpty()) {
+            errorEntries.last()
+        } else {
+            "No recent errors"
+        }
+    }
+    
+    fun getAllRecentErrors(): String {
+        return if (errorEntries.isNotEmpty()) {
+            errorEntries.joinToString("\n")
+        } else {
+            "No recent errors"
         }
     }
     

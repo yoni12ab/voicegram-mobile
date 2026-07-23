@@ -72,14 +72,26 @@ class TelegramAuthService(private val context: Context) {
     }
     
     fun authenticateWithBotFather() {
-        // Open BotFather with start parameter to initiate authentication
+        // Open BotFather with a simpler deep link format
         DebugLogger.log("Starting authentication with BotFather", DebugLogger.LogLevel.INFO)
-        openTelegramBot("BotFather", "voicegram_auth_${System.currentTimeMillis()}")
+        // Use a simpler deep link that just opens BotFather
+        val deepLink = "tg://resolve?domain=BotFather"
+        openTelegramDeepLink(deepLink)
+        Toast.makeText(context, "Opening BotFather in Telegram... Please get your bot info there", Toast.LENGTH_LONG).show()
     }
     
     fun authenticateWithCustomBot(botUsername: String) {
         DebugLogger.log("Starting authentication with custom bot: $botUsername", DebugLogger.LogLevel.INFO)
-        openTelegramBot(botUsername, "voicegram_auth")
+        val deepLink = "tg://resolve?domain=$botUsername"
+        openTelegramDeepLink(deepLink)
+    }
+    
+    fun openUserInfoBot() {
+        // Open @userinfobot to get user ID and phone number
+        DebugLogger.log("Opening @userinfobot to get user info", DebugLogger.LogLevel.INFO)
+        val deepLink = "tg://resolve?domain=userinfobot"
+        openTelegramDeepLink(deepLink)
+        Toast.makeText(context, "Opening @userinfobot... Send /start to get your user ID", Toast.LENGTH_LONG).show()
     }
     
     fun saveAuthentication(userId: String, phoneNumber: String, username: String?, authToken: String?) {
@@ -98,6 +110,10 @@ class TelegramAuthService(private val context: Context) {
             DebugLogger.logError("Error saving authentication", e)
             Toast.makeText(context, "Error saving authentication: ${e.message}", Toast.LENGTH_SHORT).show()
         }
+    }
+    
+    fun manualAuthenticate(userId: String, phoneNumber: String, username: String = "") {
+        saveAuthentication(userId, phoneNumber, username.ifEmpty { null }, null)
     }
     
     fun clearAuthentication() {

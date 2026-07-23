@@ -1,12 +1,16 @@
 package com.voicegram.app
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.voicegram.app.service.DebugLogger
 import com.voicegram.app.service.TelegramAuthService
@@ -17,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var botListButton: Button
     private lateinit var debugLogsButton: Button
     private lateinit var authButton: Button
+    private lateinit var copyErrorButton: Button
     private lateinit var versionText: TextView
     private lateinit var authStatusText: TextView
     
@@ -38,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         botListButton = findViewById(R.id.botListButton)
         debugLogsButton = findViewById(R.id.debugLogsButton)
         authButton = findViewById(R.id.authButton)
+        copyErrorButton = findViewById(R.id.copyErrorButton)
         versionText = findViewById(R.id.versionText)
         authStatusText = findViewById(R.id.authStatusText)
         
@@ -73,6 +79,10 @@ class MainActivity : AppCompatActivity() {
             exportDebugLogs()
         }
         
+        copyErrorButton.setOnClickListener {
+            copyLastErrorToClipboard()
+        }
+        
         // Show auth button initially
         showAuthButton()
     }
@@ -93,10 +103,87 @@ class MainActivity : AppCompatActivity() {
     private fun authenticateWithTelegram() {
         DebugLogger.log("Starting Telegram authentication process", DebugLogger.LogLevel.INFO)
         
-        // Open BotFather for authentication
-        telegramAuthService.authenticateWithBotFather()
+        // Show authentication options
+        val options = arrayOf(
+            "Open @userinfobot (Get your User ID)",
+            "Manual Authentication (Enter your details)",
+            "Open BotFather (Get bot info)"
+        )
         
-        Toast.makeText(this, "Opening Telegram... Complete the authentication there", Toast.LENGTH_LONG).show()
+        AlertDialog.Builder(this)
+            .setTitle("Choose Authentication Method")
+            .setItems(options) { _, which ->
+                when (which) {
+                    0 -> {
+                        // Open @userinfobot
+                        telegramAuthService.openUserInfoBot()
+                    }
+                    1 -> {
+                        // Manual authentication
+                        showManualAuthenticationDialog()
+                    }
+                    2 -> {
+                        // Open BotFather
+                        telegramAuthService.authenticateWithBotFather()
+                    }
+                }
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+    
+    private fun showManualAuthenticationDialog() {
+        val dialogView = layoutInflater.inflate(android.R.layout.simple_list_item_1, null)
+        val builder = AlertDialog.Builder(this)
+        
+        val userIdEditText = EditText(this)
+        userIdEditText.hint = "Your Telegram User ID"
+        
+        val phoneEditText = EditText(this)
+        phoneEditText.hint = "Your Phone Number (with +)"
+        
+        val usernameEditText = EditText(this)
+        usernameEditText.hint = "Your Username (optional)"
+        
+        val layout = android.widget.LinearLayout(this)
+        layout.orientation = android.widget.LinearLayout.VERTICAL
+        layout.setPadding(50, 40, 50, 10)
+        layout.addView(userIdEditText)
+        layout.addView(phoneEditText)
+        layout.addView(usernameEditText)
+        
+        builder.setTitle("Manual Authentication")
+            .setView(layout)
+            .setPositiveButton("Authenticate") { _, _ ->
+                val userId = userIdEditText.text.toString()
+                val phone = phoneEditText.text.toString()
+                val username = usernameEditText.text.toString()
+                
+                if (userId.isNotEmpty() && phone.isNotEmpty()) {
+                    telegramAuthService.manualAuthenticate(userId, phone, username)
+                    checkAuthenticationStatus()
+                } else {
+                    Toast.makeText(this, "Please enter User ID and Phone Number", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+    
+    private fun copyLastErrorToClipboard() {
+        val lastError = DebugLogger.getAllRecentErrors()
+        
+        if (lastError == "No recent errors") {
+            Toast.makeText(this, "No recent errors to copy", Toast.LENGTH_SHORT).show()
+            return
+        }
+        
+        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        val clip = ClipData.newPlainText("VoiceGram Error", lastError)
+        clipboard.setPrimaryClip(clip)
+        
+        Toast.makeText(this, "Last error copied to clipboard!", Toast.LENGTH_SHORT).show()
+        DebugLogger.log("Error copied to clipboard", DebugLogger.LogLevel.INFO)
     }
     
     private fun showAuthButton() {
