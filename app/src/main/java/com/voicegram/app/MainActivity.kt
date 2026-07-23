@@ -90,80 +90,63 @@ class MainActivity : AppCompatActivity() {
     private fun checkAuthenticationStatus() {
         if (telegramAuthService.isAuthenticated()) {
             val senderInfo = telegramAuthService.getSenderInfo()
-            authStatusText.text = "Authenticated as: ${senderInfo.username ?: senderInfo.phoneNumber}"
+            authStatusText.text = "✓ Verified: ${senderInfo.username ?: senderInfo.phoneNumber}"
             authStatusText.setTextColor(resources.getColor(android.R.color.holo_green_dark))
             showBotListButton()
         } else {
-            authStatusText.text = "Not authenticated with Telegram"
+            authStatusText.text = "✗ Not verified - Enter your Telegram details"
             authStatusText.setTextColor(resources.getColor(android.R.color.holo_red_dark))
             showAuthButton()
         }
     }
     
     private fun authenticateWithTelegram() {
-        DebugLogger.log("Starting Telegram authentication process", DebugLogger.LogLevel.INFO)
+        DebugLogger.log("Starting manual authentication process", DebugLogger.LogLevel.INFO)
         
-        // Show authentication options
-        val options = arrayOf(
-            "Open @userinfobot (Get your User ID)",
-            "Manual Authentication (Enter your details)",
-            "Open BotFather (Get bot info)"
-        )
-        
-        AlertDialog.Builder(this)
-            .setTitle("Choose Authentication Method")
-            .setItems(options) { _, which ->
-                when (which) {
-                    0 -> {
-                        // Open @userinfobot
-                        telegramAuthService.openUserInfoBot()
-                    }
-                    1 -> {
-                        // Manual authentication
-                        showManualAuthenticationDialog()
-                    }
-                    2 -> {
-                        // Open BotFather
-                        telegramAuthService.authenticateWithBotFather()
-                    }
-                }
-            }
-            .setNegativeButton("Cancel", null)
-            .show()
+        // Go directly to manual authentication since deep links don't work reliably
+        showManualAuthenticationDialog()
     }
     
     private fun showManualAuthenticationDialog() {
-        val dialogView = layoutInflater.inflate(android.R.layout.simple_list_item_1, null)
         val builder = AlertDialog.Builder(this)
         
         val userIdEditText = EditText(this)
-        userIdEditText.hint = "Your Telegram User ID"
+        userIdEditText.hint = "Your Telegram User ID (number)"
         
         val phoneEditText = EditText(this)
-        phoneEditText.hint = "Your Phone Number (with +)"
+        phoneEditText.hint = "Your Phone Number (with +, e.g. +1234567890)"
         
         val usernameEditText = EditText(this)
-        usernameEditText.hint = "Your Username (optional)"
+        usernameEditText.hint = "Your Username (optional, e.g. @username)"
+        
+        val instructionsTextView = TextView(this)
+        instructionsTextView.text = "To get your User ID:\n1. Open Telegram\n2. Search for @userinfobot\n3. Send /start\n4. Copy the number it replies with"
+        instructionsTextView.setPadding(20, 20, 20, 20)
+        instructionsTextView.textSize = 12f
         
         val layout = android.widget.LinearLayout(this)
         layout.orientation = android.widget.LinearLayout.VERTICAL
         layout.setPadding(50, 40, 50, 10)
+        layout.addView(instructionsTextView)
         layout.addView(userIdEditText)
         layout.addView(phoneEditText)
         layout.addView(usernameEditText)
         
-        builder.setTitle("Manual Authentication")
+        builder.setTitle("Enter Your Telegram Details")
+            .setMessage("This allows the app to verify your identity with your Telegram controller")
             .setView(layout)
             .setPositiveButton("Authenticate") { _, _ ->
-                val userId = userIdEditText.text.toString()
-                val phone = phoneEditText.text.toString()
-                val username = usernameEditText.text.toString()
+                val userId = userIdEditText.text.toString().trim()
+                val phone = phoneEditText.text.toString().trim()
+                val username = usernameEditText.text.toString().trim()
                 
                 if (userId.isNotEmpty() && phone.isNotEmpty()) {
                     telegramAuthService.manualAuthenticate(userId, phone, username)
                     checkAuthenticationStatus()
+                    Toast.makeText(this, "Authentication successful! Your ID will be included in messages.", Toast.LENGTH_LONG).show()
                 } else {
-                    Toast.makeText(this, "Please enter User ID and Phone Number", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please enter User ID and Phone Number (both required)", Toast.LENGTH_LONG).show()
+                    DebugLogger.logError("Manual authentication failed: missing required fields", null)
                 }
             }
             .setNegativeButton("Cancel", null)
