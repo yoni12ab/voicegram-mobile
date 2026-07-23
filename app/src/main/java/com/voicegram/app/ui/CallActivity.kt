@@ -35,9 +35,8 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
     private var botName: String? = null
     private var manualChatId: String? = null // User-provided chat ID
     private var chatId: Long? = null
-    private var lastUpdateId: Long = 0
-    private var isPolling = false
     private var senderPhoneNumber: String? = null // Sender's phone number for authentication
+    private var senderUserId: String? = null // Sender's user ID for authentication
     
     private val RECORD_AUDIO_PERMISSION = 1
     
@@ -50,6 +49,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         botName = intent.getStringExtra("bot_name")
         manualChatId = intent.getStringExtra("bot_chat_id")
         senderPhoneNumber = intent.getStringExtra("sender_phone_number") // Get sender phone number
+        senderUserId = intent.getStringExtra("sender_user_id") // Get sender user ID
         
         // Initialize services
         speechToTextConverter = SpeechToTextConverter(this)
@@ -173,14 +173,13 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
             
             showLoading("Sending to @$botName (${NetworkUtils.getNetworkType(this@CallActivity)})...")
             
-            // Use the chat ID for sending messages with sender phone number for authentication
-            val result = telegramService.sendMessage(botToken ?: "", targetChatId, text, senderPhoneNumber)
+            // Use the chat ID for sending messages with sender phone number and user ID for authentication
+            val result = telegramService.sendMessage(botToken ?: "", targetChatId, text, senderPhoneNumber, senderUserId)
             
             if (result.success) {
-                showStatus("Message sent to @$botName")
-                
-                // Start polling for bot responses
-                startBotResponsePolling()
+                showStatus("Message sent to @$botName with sender verification")
+                Toast.makeText(applicationContext, "Message sent successfully with your ID for verification", Toast.LENGTH_SHORT).show()
+                // Don't poll for responses - just send and be done
             } else {
                 val errorMessage = result.error ?: "Unknown error"
                 showStatus("Error: $errorMessage")
@@ -204,59 +203,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         }
     }
     
-    private fun startBotResponsePolling() {
-        if (isPolling) return
-        isPolling = true
-        
-        launch {
-            showLoading("Waiting for bot response...")
-            
-            // Poll for responses with timeout
-            val maxPolls = 10 // Maximum number of polling attempts
-            var pollCount = 0
-            
-            while (isPolling && pollCount < maxPolls) {
-                try {
-                    val updates = telegramService.getBotUpdates(botToken ?: "", lastUpdateId + 1)
-                    
-                    if (updates.isNotEmpty()) {
-                        val lastMessage = updates.last()
-                        lastUpdateId = lastMessage.updateId
-                        
-                        if (lastMessage.text.isNotEmpty()) {
-                            isPolling = false
-                            showStatus("Response received")
-                            speakBotResponse(lastMessage.text)
-                            return@launch
-                        }
-                    }
-                    
-                    pollCount++
-                    kotlinx.coroutines.delay(1000) // Wait 1 second between polls
-                    
-                } catch (e: Exception) {
-                    // Continue polling on error
-                    pollCount++
-                    kotlinx.coroutines.delay(1000)
-                }
-            }
-            
-            // Timeout reached
-            isPolling = false
-            showStatus("No response received from @$botName")
-            Toast.makeText(applicationContext, "Bot didn't respond within timeout", Toast.LENGTH_LONG).show()
-        }
-    }
-    
-    private fun speakBotResponse(text: String) {
-        showStatus("Bot: $text")
-        textToSpeechConverter.speak(text) {
-            showStatus("Ready to speak")
-        }
-    }
-    
     private fun endCall() {
-        isPolling = false // Stop polling
         speechToTextConverter.stopListening()
         showStatus("Call ended")
         
