@@ -37,6 +37,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
     private var chatId: Long? = null
     private var lastUpdateId: Long = 0
     private var isPolling = false
+    private var senderPhoneNumber: String? = null // Sender's phone number for authentication
     
     private val RECORD_AUDIO_PERMISSION = 1
     
@@ -48,6 +49,7 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
         botToken = intent.getStringExtra("bot_token")
         botName = intent.getStringExtra("bot_name")
         manualChatId = intent.getStringExtra("bot_chat_id")
+        senderPhoneNumber = intent.getStringExtra("sender_phone_number") // Get sender phone number
         
         // Initialize services
         speechToTextConverter = SpeechToTextConverter(this)
@@ -171,8 +173,8 @@ class CallActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Dispa
             
             showLoading("Sending to @$botName (${NetworkUtils.getNetworkType(this@CallActivity)})...")
             
-            // Use the chat ID for sending messages
-            val result = telegramService.sendMessage(botToken ?: "", targetChatId, text)
+            // Use the chat ID for sending messages with sender phone number for authentication
+            val result = telegramService.sendMessage(botToken ?: "", targetChatId, text, senderPhoneNumber)
             
             if (result.success) {
                 showStatus("Message sent to @$botName")

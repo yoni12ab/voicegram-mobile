@@ -28,6 +28,20 @@
         android:text="My Bots"
         android:textColor="#ffffff"
         android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- Authentication Button -->
+    <Button
+        android:id="@+id/authButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#2196F3"
+        android:padding="16dp"
+        android:text="Authenticate with Telegram"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <!-- Info Text -->
@@ -40,6 +54,19 @@
         android:textAlignment="center"
         android:textColor="#666666"
         android:textSize="14sp" />
+
+    <!-- Authentication Status -->
+    <TextView
+        android:id="@+id/authStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Not authenticated with Telegram"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <!-- Version Info -->
     <TextView

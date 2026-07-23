@@ -22,21 +22,28 @@ class TelegramService {
     
     private val JSON = "application/json; charset=utf-8".toMediaType()
     
-    suspend fun sendMessage(botToken: String, chatId: String, text: String): MessageResult = withContext(Dispatchers.IO) {
+    suspend fun sendMessage(botToken: String, chatId: String, text: String, senderPhoneNumber: String? = null): MessageResult = withContext(Dispatchers.IO) {
         try {
             val url = "https://api.telegram.org/bot$botToken/sendMessage"
+            
+            // Add sender phone number to message for controller verification
+            val messageWithSender = if (senderPhoneNumber != null) {
+                "From: $senderPhoneNumber\n\n$text"
+            } else {
+                text
+            }
             
             val json = """
                 {
                     "chat_id": "$chatId",
-                    "text": "$text",
+                    "text": "$messageWithSender",
                     "parse_mode": "HTML"
                 }
             """.trimIndent()
             
             // Log the API call
             DebugLogger.logApiCall(url, "POST", json)
-            DebugLogger.log("Attempting to send message to chat_id: $chatId", DebugLogger.LogLevel.INFO)
+            DebugLogger.log("Attempting to send message to chat_id: $chatId from sender: $senderPhoneNumber", DebugLogger.LogLevel.INFO)
             
             val requestBody = json.toRequestBody(JSON)
             val request = Request.Builder()
