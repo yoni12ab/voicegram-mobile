@@ -62,10 +62,28 @@ class TelegramService {
                     
                     // Provide more detailed error information
                     val detailedError = when (errorCode) {
-                        403 -> "403 Forbidden: Bot cannot send messages to this chat. Please send /start to the bot in Telegram first."
-                        400 -> "400 Bad Request: Invalid chat ID or message format. Error: $errorDescription"
-                        401 -> "401 Unauthorized: Invalid bot token"
-                        429 -> "429 Too Many Requests: Rate limited by Telegram"
+                        403 -> """
+                            403 Forbidden: Bot cannot send messages to this chat.
+                            
+                            SOLUTIONS:
+                            1. Send /start to your bot in Telegram first
+                            2. Use @userinfobot to get your correct chat ID
+                            3. Add your chat ID manually in bot settings
+                            
+                            Error: $errorDescription
+                        """.trimIndent()
+                        400 -> """
+                            400 Bad Request: Invalid chat ID or message format.
+                            
+                            SOLUTIONS:
+                            1. Check your chat ID format (should be a number like 123456789)
+                            2. Get your correct chat ID from @userinfobot
+                            3. Make sure you've started a conversation with your bot
+                            
+                            Error: $errorDescription
+                        """.trimIndent()
+                        401 -> "401 Unauthorized: Invalid bot token. Please check your bot token."
+                        429 -> "429 Too Many Requests: Rate limited by Telegram. Please wait a moment."
                         else -> "Telegram API error ($errorCode): $errorDescription"
                     }
                     
@@ -78,11 +96,18 @@ class TelegramService {
             } else {
                 // Handle HTTP errors with more detail
                 val errorDetails = when (response.code) {
-                    403 -> "403 Forbidden: Bot doesn't have permission to send to this chat. Send /start to your bot in Telegram first."
-                    401 -> "401 Unauthorized: Check your bot token"
-                    404 -> "404 Not Found: Bot token or API endpoint incorrect"
-                    429 -> "429 Too Many Requests: Telegram rate limit"
-                    500 -> "500 Server Error: Telegram API is down"
+                    403 -> """
+                        403 Forbidden: Bot doesn't have permission to send to this chat.
+                        
+                        SOLUTIONS:
+                        1. Send /start to your bot in Telegram
+                        2. Get your chat ID from @userinfobot
+                        3. Add your chat ID in bot settings manually
+                    """.trimIndent()
+                    401 -> "401 Unauthorized: Check your bot token - it might be invalid."
+                    404 -> "404 Not Found: Bot token or API endpoint incorrect. Please verify your bot token."
+                    429 -> "429 Too Many Requests: Telegram rate limit. Please wait a moment."
+                    500 -> "500 Server Error: Telegram API is temporarily down. Please try again later."
                     else -> "HTTP error ${response.code}: ${response.message}"
                 }
                 
