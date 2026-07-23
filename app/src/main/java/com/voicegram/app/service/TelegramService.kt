@@ -34,6 +34,10 @@ class TelegramService {
                 }
             """.trimIndent()
             
+            // Log the API call
+            DebugLogger.logApiCall(url, "POST", json)
+            DebugLogger.log("Attempting to send message to chat_id: $chatId", DebugLogger.LogLevel.INFO)
+            
             val requestBody = json.toRequestBody(JSON)
             val request = Request.Builder()
                 .url(url)
@@ -43,6 +47,9 @@ class TelegramService {
             val response = client.newCall(request).execute()
             val responseBody = response.body?.string()
             
+            // Log the response
+            DebugLogger.logApiResponse(url, response.code, responseBody)
+            
             if (response.isSuccessful && responseBody != null) {
                 val jsonResponse = JsonParser.parseString(responseBody).asJsonObject
                 val ok = jsonResponse.get("ok").asBoolean
@@ -50,6 +57,8 @@ class TelegramService {
                 if (ok) {
                     val result = jsonResponse.getAsJsonObject("result")
                     val messageId = result.get("message_id").asInt
+                    
+                    DebugLogger.log("Message sent successfully! Message ID: $messageId", DebugLogger.LogLevel.INFO)
                     
                     MessageResult(
                         success = true,
@@ -87,6 +96,8 @@ class TelegramService {
                         else -> "Telegram API error ($errorCode): $errorDescription"
                     }
                     
+                    DebugLogger.logError("API Error $errorCode: $errorDescription", null)
+                    
                     MessageResult(
                         success = false,
                         messageId = null,
@@ -111,6 +122,8 @@ class TelegramService {
                     else -> "HTTP error ${response.code}: ${response.message}"
                 }
                 
+                DebugLogger.logError("HTTP Error ${response.code}: ${response.message}", null)
+                
                 MessageResult(
                     success = false,
                     messageId = null,
@@ -118,6 +131,8 @@ class TelegramService {
                 )
             }
         } catch (e: Exception) {
+            DebugLogger.logError("Network/Exception error: ${e.message}", e)
+            
             MessageResult(
                 success = false,
                 messageId = null,
@@ -130,12 +145,19 @@ class TelegramService {
         try {
             val url = "https://api.telegram.org/bot$botToken/getUpdates?offset=$offset&timeout=10"
             
+            // Log the polling call
+            DebugLogger.logApiCall(url, "GET", null)
+            DebugLogger.log("Polling for bot updates with offset: $offset", DebugLogger.LogLevel.DEBUG)
+            
             val request = Request.Builder()
                 .url(url)
                 .build()
             
             val response = client.newCall(request).execute()
             val responseBody = response.body?.string()
+            
+            // Log the polling response
+            DebugLogger.logApiResponse(url, response.code, responseBody)
             
             if (response.isSuccessful && responseBody != null) {
                 val jsonResponse = JsonParser.parseString(responseBody).asJsonObject
@@ -144,6 +166,8 @@ class TelegramService {
                 if (ok && jsonResponse.has("result")) {
                     val result = jsonResponse.getAsJsonArray("result")
                     val messages = mutableListOf<BotMessage>()
+                    
+                    DebugLogger.log("Received ${result.size()} updates from Telegram", DebugLogger.LogLevel.DEBUG)
                     
                     for (item in result) {
                         val messageObj = item.asJsonObject
@@ -167,17 +191,22 @@ class TelegramService {
                                 chatId = chatId,
                                 timestamp = message.get("date").asLong
                             ))
+                            
+                            DebugLogger.log("Parsed message from $fromName (ID: $fromId) in chat $chatId: $text", DebugLogger.LogLevel.DEBUG)
                         }
                     }
                     
                     messages
                 } else {
+                    DebugLogger.log("No updates received from Telegram or API error", DebugLogger.LogLevel.DEBUG)
                     emptyList()
                 }
             } else {
+                DebugLogger.log("Failed to get updates: HTTP ${response.code}", DebugLogger.LogLevel.WARN)
                 emptyList()
             }
         } catch (e: Exception) {
+            DebugLogger.logError("Error getting bot updates: ${e.message}", e)
             emptyList()
         }
     }
