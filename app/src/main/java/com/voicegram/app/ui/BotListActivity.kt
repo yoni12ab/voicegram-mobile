@@ -3,14 +3,18 @@ package com.voicegram.app.ui
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.voicegram.app.R
 import com.voicegram.app.service.BotValidator
+import com.voicegram.app.service.TelegramService
+import com.voicegram.app.service.DebugLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,6 +28,7 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
     private val botList = ArrayList<BotItem>()
     private lateinit var adapter: BotAdapter
     private val botValidator = BotValidator(this)
+    private val telegramService = TelegramService()
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +59,20 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
         addBotButton.setOnClickListener {
             showAddBotDialog()
         }
+        
+        // Add test chat ID button
+        val testChatIdButton = Button(this)
+        testChatIdButton.text = "Test Chat IDs"
+        testChatIdButton.setBackgroundColor(android.graphics.Color.parseColor("#FF5722"))
+        testChatIdButton.setTextColor(android.graphics.Color.WHITE)
+        testChatIdButton.setOnClickListener {
+            showChatIdTestDialog()
+        }
+        
+        // Add button to the layout
+        val parentLayout = addBotButton.parent as android.widget.LinearLayout
+        val index = parentLayout.indexOfChild(addBotButton)
+        parentLayout.addView(testChatIdButton, index + 1)
     }
     
     private fun loadBots() {
@@ -165,5 +184,78 @@ class BotListActivity : AppCompatActivity(), CoroutineScope by CoroutineScope(Di
         intent.putExtra("bot_token", bot.token)
         intent.putExtra("bot_chat_id", bot.chatId)
         startActivity(intent)
+    }
+    
+    private fun showChatIdTestDialog() {
+        val builder = AlertDialog.Builder(this)
+        
+        val botTokenEditText = EditText(this)
+        botTokenEditText.hint = "Bot Token"
+        
+        val chatIdEditText = EditText(this)
+        chatIdEditText.hint = "Chat ID to test (number or @username)"
+        
+        val testInstructions = TextView(this)
+        testInstructions.text = "Test different chat IDs to find which one works:\n\n1. Try your user ID from @userinfobot\n2. Try the bot's own ID\n3. Try @username format\n4. Check logs for detailed error info"
+        testInstructions.setPadding(20, 20, 20, 20)
+        testInstructions.textSize = 12f
+        
+        val layout = android.widget.LinearLayout(this)
+        layout.orientation = android.widget.LinearLayout.VERTICAL
+        layout.setPadding(50, 40, 50, 10)
+        layout.addView(testInstructions)
+        layout.addView(botTokenEditText)
+        layout.addView(chatIdEditText)
+        
+        builder.setTitle("Test Chat ID")
+            .setMessage("Send a test message to identify the working chat ID")
+            .setView(layout)
+            .setPositiveButton("Test") { _, _ ->
+                val botToken = botTokenEditText.text.toString().trim()
+                val chatId = chatIdEditText.text.toString().trim()
+                
+                if (botToken.isNotEmpty() && chatId.isNotEmpty()) {
+                    testChatId(botToken, chatId)
+                } else {
+                    Toast.makeText(this, "Please enter both Bot Token and Chat ID", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+    
+    private fun testChatId(botToken: String, chatId: String) {
+        launch {
+            try {
+                Toast.makeText(applicationContext, "Testing chat ID: $chatId...", Toast.LENGTH_SHORT).show()
+                DebugLogger.log("Testing chat ID: $chatId with bot token: ${botToken.take(10)}...", DebugLogger.LogLevel.INFO)
+                
+                val result = telegramService.sendMessage(botToken, chatId, "Test message from VoiceGram", null, null)
+                
+                if (result.success) {
+                    Toast.makeText(applicationContext, "✓ SUCCESS! Chat ID '$chatId' works!", Toast.LENGTH_LONG).show()
+                    DebugLogger.log("Chat ID test SUCCESS: $chatId", DebugLogger.LogLevel.INFO)
+                    
+                    AlertDialog.Builder(this@BotListActivity)
+                        .setTitle("Chat ID Works!")
+                        .setMessage("Chat ID '$chatId' is working!\n\nUse this chat ID in your bot configuration.")
+                        .setPositiveButton("OK", null)
+                        .show()
+                } else {
+                    val error = result.error ?: "Unknown error"
+                    Toast.makeText(applicationContext, "✗ FAILED: $error", Toast.LENGTH_LONG).show()
+                    DebugLogger.logError("Chat ID test FAILED for '$chatId': $error", null)
+                    
+                    AlertDialog.Builder(this@BotListActivity)
+                        .setTitle("Chat ID Failed")
+                        .setMessage("Chat ID '$chatId' failed with error:\n\n$error\n\nTry a different chat ID.")
+                        .setPositiveButton("OK", null)
+                        .show()
+                }
+            } catch (e: Exception) {
+                Toast.makeText(applicationContext, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                DebugLogger.logError("Chat ID test exception", e)
+            }
+        }
     }
 }
